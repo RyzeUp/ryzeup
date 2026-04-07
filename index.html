@@ -34,40 +34,118 @@
     <div class="hero-bg">
       <div class="mesh-gradient"></div>
       <div class="noise-overlay"></div>
-      <div class="hero-chart" aria-hidden="true">
-        <svg viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-          <!-- Grid lines -->
-          <line x1="60" y1="40" x2="60" y2="360" stroke="rgba(218,0,55,0.12)" stroke-width="1"/>
-          <line x1="180" y1="40" x2="180" y2="360" stroke="rgba(218,0,55,0.08)" stroke-width="1"/>
-          <line x1="300" y1="40" x2="300" y2="360" stroke="rgba(218,0,55,0.08)" stroke-width="1"/>
-          <line x1="420" y1="40" x2="420" y2="360" stroke="rgba(218,0,55,0.08)" stroke-width="1"/>
-          <line x1="540" y1="40" x2="540" y2="360" stroke="rgba(218,0,55,0.08)" stroke-width="1"/>
-          <line x1="40" y1="360" x2="580" y2="360" stroke="rgba(218,0,55,0.12)" stroke-width="1"/>
-          <line x1="40" y1="280" x2="580" y2="280" stroke="rgba(218,0,55,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
-          <line x1="40" y1="200" x2="580" y2="200" stroke="rgba(218,0,55,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
-          <line x1="40" y1="120" x2="580" y2="120" stroke="rgba(218,0,55,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
-          <!-- Bar chart (background) -->
-          <rect x="72" y="290" width="56" height="70" rx="5" fill="rgba(218,0,55,0.07)"/>
-          <rect x="192" y="250" width="56" height="110" rx="5" fill="rgba(218,0,55,0.07)"/>
-          <rect x="312" y="200" width="56" height="160" rx="5" fill="rgba(218,0,55,0.08)"/>
-          <rect x="432" y="150" width="56" height="210" rx="5" fill="rgba(218,0,55,0.09)"/>
-          <!-- Growth line (main) -->
-          <path d="M60 330 C100 320, 140 290, 180 265 C220 240, 260 215, 300 185 C340 155, 380 125, 420 105 C460 85, 500 75, 540 60" stroke="rgba(218,0,55,0.55)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- Fill under the line -->
-          <path d="M60 330 C100 320, 140 290, 180 265 C220 240, 260 215, 300 185 C340 155, 380 125, 420 105 C460 85, 500 75, 540 60 L540 360 L60 360 Z" fill="url(#chartFill)"/>
-          <!-- Data points -->
-          <circle cx="60" cy="330" r="4" fill="rgba(218,0,55,0.6)" stroke="rgba(237,237,237,0.8)" stroke-width="1.5"/>
-          <circle cx="180" cy="265" r="4" fill="rgba(218,0,55,0.6)" stroke="rgba(237,237,237,0.8)" stroke-width="1.5"/>
-          <circle cx="300" cy="185" r="4" fill="rgba(218,0,55,0.6)" stroke="rgba(237,237,237,0.8)" stroke-width="1.5"/>
-          <circle cx="420" cy="105" r="4" fill="rgba(218,0,55,0.6)" stroke="rgba(237,237,237,0.8)" stroke-width="1.5"/>
-          <circle cx="540" cy="60" r="5" fill="rgba(218,0,55,0.85)" stroke="rgba(237,237,237,0.9)" stroke-width="2"/>
-          <!-- Gradient definition -->
+      <div class="hero-mockup" aria-hidden="true">
+        <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="rgba(218,0,55,0.1)"/>
-              <stop offset="100%" stop-color="rgba(218,0,55,0)"/>
+            <linearGradient id="heroGradFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(124,58,237,0.18)"/>
+              <stop offset="100%" stop-color="rgba(124,58,237,0)"/>
             </linearGradient>
+            <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+              <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.08)"/>
+            </filter>
           </defs>
+
+          <!-- Browser window frame -->
+          <rect width="560" height="420" rx="14" fill="white" stroke="rgba(124,58,237,0.1)" stroke-width="1.5"/>
+
+          <!-- Title bar -->
+          <rect width="560" height="46" rx="14" fill="#F0EEF8"/>
+          <rect y="32" width="560" height="14" fill="#F0EEF8"/>
+
+          <!-- Traffic lights -->
+          <circle cx="22" cy="23" r="5.5" fill="#FF5F57" opacity="0.75"/>
+          <circle cx="39" cy="23" r="5.5" fill="#FEBC2E" opacity="0.75"/>
+          <circle cx="56" cy="23" r="5.5" fill="#28C840" opacity="0.75"/>
+
+          <!-- URL bar -->
+          <rect x="74" y="13" width="408" height="20" rx="10" fill="white" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+          <circle cx="90" cy="23" r="5" fill="none" stroke="rgba(124,58,237,0.5)" stroke-width="1.5"/>
+          <text x="265" y="27" text-anchor="middle" fill="#999" font-size="9.5" font-family="monospace">ryzeup.co.uk</text>
+
+          <!-- ── Mock website inside browser ── -->
+
+          <!-- Navbar of mock site -->
+          <rect x="0" y="46" width="560" height="38" fill="#FAFAFA" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/>
+          <!-- Logo pill -->
+          <rect x="16" y="58" width="64" height="14" rx="4" fill="#7C3AED" opacity="0.85"/>
+          <!-- Nav links -->
+          <rect x="270" y="64" width="34" height="7" rx="2" fill="#DDD"/>
+          <rect x="314" y="64" width="34" height="7" rx="2" fill="#DDD"/>
+          <rect x="358" y="64" width="34" height="7" rx="2" fill="#DDD"/>
+          <!-- CTA nav button -->
+          <rect x="458" y="57" width="74" height="18" rx="5" fill="#7C3AED"/>
+
+          <!-- Hero area background -->
+          <rect x="0" y="84" width="560" height="176" fill="#F8F6FF"/>
+
+          <!-- Hero left text content -->
+          <!-- Badge -->
+          <rect x="16" y="96" width="112" height="15" rx="7" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.2)" stroke-width="0.75"/>
+          <circle cx="29" cy="103.5" r="3.5" fill="#7C3AED" opacity="0.8"/>
+          <rect x="37" y="99.5" width="80" height="7" rx="2" fill="#7C3AED" opacity="0.35"/>
+
+          <!-- Headline lines -->
+          <rect x="16" y="120" width="210" height="15" rx="3" fill="#111118" opacity="0.75"/>
+          <rect x="16" y="141" width="176" height="15" rx="3" fill="#111118" opacity="0.55"/>
+
+          <!-- Sub text -->
+          <rect x="16" y="166" width="192" height="7" rx="2" fill="#999" opacity="0.5"/>
+          <rect x="16" y="179" width="156" height="7" rx="2" fill="#999" opacity="0.4"/>
+
+          <!-- CTA buttons -->
+          <rect x="16" y="196" width="92" height="26" rx="6" fill="#7C3AED"/>
+          <rect x="116" y="196" width="92" height="26" rx="6" fill="transparent" stroke="#7C3AED" stroke-width="1.5" opacity="0.8"/>
+
+          <!-- Hero right: mini chart card -->
+          <rect x="318" y="90" width="226" height="164" rx="10" fill="white" filter="url(#cardShadow)" stroke="rgba(124,58,237,0.08)" stroke-width="1"/>
+          <!-- Chart title -->
+          <rect x="334" y="104" width="88" height="8" rx="2" fill="#CCC"/>
+          <rect x="334" y="116" width="56" height="18" rx="3" fill="#7C3AED" opacity="0.12"/>
+          <rect x="336" y="118.5" width="52" height="13" rx="2" fill="#7C3AED" opacity="0.6"/>
+          <!-- Chart bars -->
+          <rect x="336" y="196" width="18" height="28" rx="3" fill="rgba(124,58,237,0.15)"/>
+          <rect x="362" y="182" width="18" height="42" rx="3" fill="rgba(124,58,237,0.22)"/>
+          <rect x="388" y="165" width="18" height="59" rx="3" fill="rgba(124,58,237,0.3)"/>
+          <rect x="414" y="147" width="18" height="77" rx="3" fill="rgba(124,58,237,0.38)"/>
+          <rect x="440" y="128" width="18" height="96" rx="3" fill="#7C3AED" opacity="0.6"/>
+          <rect x="466" y="112" width="18" height="112" rx="3" fill="#7C3AED" opacity="0.75"/>
+          <!-- Chart baseline -->
+          <line x1="328" y1="225" x2="494" y2="225" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+          <!-- Trend line -->
+          <polyline points="345,200 371,186 397,168 423,150 449,131 475,115" stroke="#7C3AED" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+          <circle cx="345" cy="200" r="2.5" fill="#7C3AED" opacity="0.6"/>
+          <circle cx="475" cy="115" r="3.5" fill="#7C3AED"/>
+
+          <!-- Stats strip -->
+          <rect x="0" y="260" width="560" height="60" fill="rgba(0,0,0,0.025)" stroke="rgba(0,0,0,0.04)" stroke-width="0.5"/>
+          <rect x="28" y="275" width="52" height="12" rx="3" fill="#7C3AED" opacity="0.55"/>
+          <rect x="28" y="293" width="72" height="7" rx="2" fill="#CCC"/>
+          <rect x="162" y="275" width="52" height="12" rx="3" fill="#7C3AED" opacity="0.55"/>
+          <rect x="162" y="293" width="72" height="7" rx="2" fill="#CCC"/>
+          <rect x="296" y="275" width="52" height="12" rx="3" fill="#7C3AED" opacity="0.55"/>
+          <rect x="296" y="293" width="72" height="7" rx="2" fill="#CCC"/>
+          <rect x="430" y="275" width="52" height="12" rx="3" fill="#7C3AED" opacity="0.55"/>
+          <rect x="430" y="293" width="72" height="7" rx="2" fill="#CCC"/>
+
+          <!-- Service cards strip -->
+          <rect x="12" y="330" width="164" height="72" rx="8" fill="white" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+          <rect x="26" y="342" width="20" height="20" rx="5" fill="rgba(124,58,237,0.1)"/>
+          <rect x="52" y="345" width="72" height="8" rx="2" fill="#CCC"/>
+          <rect x="52" y="359" width="56" height="6" rx="2" fill="#E5E5E5"/>
+          <rect x="26" y="376" width="136" height="18" rx="4" fill="rgba(124,58,237,0.08)" stroke="rgba(124,58,237,0.2)" stroke-width="0.75"/>
+
+          <rect x="194" y="330" width="164" height="72" rx="8" fill="white" stroke="rgba(124,58,237,0.25)" stroke-width="1"/>
+          <rect x="208" y="342" width="20" height="20" rx="5" fill="rgba(124,58,237,0.18)"/>
+          <rect x="234" y="345" width="72" height="8" rx="2" fill="#CCC"/>
+          <rect x="234" y="359" width="56" height="6" rx="2" fill="#E5E5E5"/>
+          <rect x="208" y="376" width="136" height="18" rx="4" fill="#7C3AED"/>
+
+          <rect x="376" y="330" width="164" height="72" rx="8" fill="white" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+          <rect x="390" y="342" width="20" height="20" rx="5" fill="rgba(124,58,237,0.1)"/>
+          <rect x="416" y="345" width="72" height="8" rx="2" fill="#CCC"/>
+          <rect x="416" y="359" width="56" height="6" rx="2" fill="#E5E5E5"/>
+          <rect x="390" y="376" width="136" height="18" rx="4" fill="rgba(124,58,237,0.08)" stroke="rgba(124,58,237,0.2)" stroke-width="0.75"/>
         </svg>
       </div>
     </div>
@@ -147,7 +225,7 @@
         <div class="glass-card service-card reveal featured-card">
           <div class="card-badge">Most Popular</div>
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3a14.5 14.5 0 0 1 0 18M3 12h18"/><path d="M3.6 7h16.8M3.6 17h16.8"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
           </div>
           <h3>Local SEO</h3>
           <p>Dominate local search results and Google Maps. Get your business in front of customers searching in your area right now.</p>
@@ -365,7 +443,8 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#home" class="logo">Ryze<span>Up</span></a>
-        <p>Professional websites & SEO for local businesses across the UK.</p>
+        <p class="footer-tagline">Websites & SEO for UK local businesses</p>
+        <p>Professional website design and search engine optimisation for local businesses across the UK.</p>
       </div>
       <div class="footer-links">
         <h4>Navigation</h4>
