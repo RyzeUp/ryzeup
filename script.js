@@ -89,26 +89,41 @@ if (statsGrid) counterObserver.observe(statsGrid);
 /* ---------- Contact form ---------- */
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const btn = form.querySelector('button[type="submit"]');
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    // Simulate submission (replace with real fetch/API call)
-    setTimeout(() => {
-      form.innerHTML = `
-        <div class="form-success">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#DA0037" stroke-width="2" width="56" height="56" style="margin:0 auto 20px">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="9 12 11 14 15 10"/>
-          </svg>
-          <h3>Message Sent!</h3>
-          <p>Thanks for reaching out. We'll be in touch within 24 hours.</p>
-        </div>
-      `;
-    }, 1200);
+    try {
+      const res = await fetch('https://formspree.io/f/xaqkaedk', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (res.ok) {
+        form.innerHTML = `
+          <div class="form-success">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#DA0037" stroke-width="2" width="56" height="56" style="margin:0 auto 20px">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out. We'll be in touch within 24 hours.</p>
+          </div>
+        `;
+      } else {
+        btn.textContent = 'Send Enquiry →';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email us directly at david@ryzeup.co.uk');
+      }
+    } catch {
+      btn.textContent = 'Send Enquiry →';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again or email us directly at david@ryzeup.co.uk');
+    }
   });
 }
 
