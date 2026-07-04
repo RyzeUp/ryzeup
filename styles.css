@@ -424,42 +424,42 @@ section { padding: 80px 0; }
 }
 
 /* ============================================================
-   STATS BAR
+   HOW IT WORKS
    ============================================================ */
-.stats-bar {
+.how-it-works {
   padding: 0;
   background: rgba(0,0,0,0.03);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
-.stats-grid {
+.hiw-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
 }
-.stat-item {
-  padding: 40px 24px;
-  text-align: center;
+.hiw-step {
+  padding: 48px 32px;
   border-right: 1px solid var(--border);
 }
-.stat-item:last-child { border-right: none; }
-.stat-number {
+.hiw-step:last-child { border-right: none; }
+.hiw-number {
   font-family: var(--font-head);
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: var(--text);
-  line-height: 1;
-}
-.stat-suffix {
-  font-family: var(--font-head);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--accent);
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 16px;
 }
-.stat-item p {
-  margin-top: 8px;
-  font-size: 0.85rem;
+.hiw-step h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.hiw-step p {
+  font-size: 0.88rem;
   color: var(--muted);
+  line-height: 1.65;
 }
 
 /* ============================================================
@@ -839,10 +839,10 @@ input:focus, select:focus, textarea:focus {
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .contact-inner { grid-template-columns: 1fr; }
   .contact-card { height: auto; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-item:nth-child(2) { border-right: none; }
-  .stat-item:nth-child(3) { border-top: 1px solid var(--border); }
-  .stat-item:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+  .hiw-grid { grid-template-columns: repeat(2, 1fr); }
+  .hiw-step:nth-child(2) { border-right: none; }
+  .hiw-step:nth-child(3) { border-top: 1px solid var(--border); }
+  .hiw-step:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
   .hero-content { width: 100%; }
   .hero-mockup { display: none; }
 }
@@ -880,12 +880,16 @@ input:focus, select:focus, textarea:focus {
   .step-arrow { transform: rotate(90deg); margin-top: 0; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 36px; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .hiw-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-form { padding: 28px 24px; }
   .pricing-card { padding: 32px 24px; }
 }
 
 @media (max-width: 480px) {
-  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .hiw-grid { grid-template-columns: 1fr; }
+  .hiw-step { border-right: none; border-bottom: 1px solid var(--border); }
+  .hiw-step:last-child { border-bottom: none; }
+  .hiw-step:nth-child(3) { border-top: none; }
+  .hiw-step:nth-child(4) { border-top: none; }
   .hero-headline { font-size: 2.2rem; }
 }
