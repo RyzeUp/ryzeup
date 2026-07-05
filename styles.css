@@ -317,6 +317,32 @@ section { padding: 80px 0; }
   background-size: 200px 200px;
 }
 
+/* Hero photo */
+.hero-photo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 58%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.22;
+  pointer-events: none;
+  mask-image:
+    linear-gradient(to right, transparent 0%, black 35%),
+    linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, black 35%),
+    linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+  filter: grayscale(15%);
+}
+
+@media (max-width: 1024px) {
+  .hero-photo { display: none; }
+}
+
 /* Browser mockup */
 .hero-mockup {
   position: absolute;
