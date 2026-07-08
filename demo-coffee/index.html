@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember &amp; Oak Coffee — Bristol</title>
+  <meta name="description" content="Ember &amp; Oak is an independent coffee shop in Bristol. Specialty coffee, seasonal food, and homemade pastries in a warm, welcoming space." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Ember <span>&</span> Oak</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#hours" class="nav-link">Hours</a></li>
+        <li><a href="#find-us" class="nav-link">Find Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <!-- REPLACE: swap data-bg with a real full-width shop photo -->
+  <section class="hero" id="home" data-bg="https://picsum.photos/seed/coffeehero/1920/1080">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Independent Coffee Shop · Bristol</p>
+      <h1>Ember <em>&</em> Oak</h1>
+      <p class="hero-tagline">Slow coffee. Good company.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">View Menu</a>
+        <a href="#find-us" class="btn btn-outline">Find Us</a>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span></div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-text fade-in">
+        <span class="eyebrow">Our Story</span>
+        <h2>A corner of Bristol made for slowing down</h2>
+        <p>Ember &amp; Oak started as a dream shared over a terrible office coffee. We wanted a place where the espresso is taken seriously, the chairs are comfortable enough to stay for hours, and nobody rushes you out the door.</p>
+        <p>We opened our doors in 2019 in the heart of Stokes Croft, sourcing our beans directly from small farms in Ethiopia, Colombia, and Guatemala. Every cup is brewed to order — no shortcuts, no compromises.</p>
+        <p>Whether you're here for a quick flat white before work or a slow afternoon with a book, we're glad you found us.</p>
+      </div>
+      <!-- REPLACE: swap with a real interior or atmosphere photo -->
+      <div class="about-image fade-in">
+        <img src="https://picsum.photos/seed/coffeeabout/800/600" alt="Inside Ember &amp; Oak coffee shop" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">What We Serve</span>
+        <h2>The Menu</h2>
+        <p>Made fresh every day. All milk alternatives available at no extra charge.</p>
+      </div>
+
+      <div class="menu-tabs fade-in" id="menuTabs">
+        <button class="tab-btn active" data-tab="coffee">Coffee</button>
+        <button class="tab-btn" data-tab="tea">Tea</button>
+        <button class="tab-btn" data-tab="food">Food</button>
+        <button class="tab-btn" data-tab="pastries">Pastries</button>
+      </div>
+
+      <div class="menu-panel active" id="tab-coffee">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Flat White</h4><span class="price">£3.20</span></div>
+            <p>Our signature blend, silky steamed milk, velvety crema</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Single Origin Pour Over</h4><span class="price">£4.50</span></div>
+            <p>Ethiopian Yirgacheffe, bright &amp; floral — ask your barista for today's origin</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Cortado</h4><span class="price">£3.00</span></div>
+            <p>Equal parts espresso and warm, lightly textured milk</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Cold Brew</h4><span class="price">£4.00</span></div>
+            <p>18-hour slow steep, smooth and naturally sweet, served over ice</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Espresso</h4><span class="price">£2.50</span></div>
+            <p>Double shot, single origin or house blend — your choice</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Oat Latte</h4><span class="price">£3.80</span></div>
+            <p>Espresso, Oatly barista, expertly steamed — a daily ritual</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="tab-tea">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>English Breakfast</h4><span class="price">£2.50</span></div>
+            <p>Classic robust blend, served with milk on the side</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Earl Grey</h4><span class="price">£2.50</span></div>
+            <p>Bergamot-scented black tea, light and aromatic</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Matcha Latte</h4><span class="price">£4.20</span></div>
+            <p>Ceremonial grade matcha, oat milk, lightly sweetened</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Chamomile &amp; Honey</h4><span class="price">£2.80</span></div>
+            <p>Soothing whole flower chamomile with wildflower honey</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Peppermint</h4><span class="price">£2.50</span></div>
+            <p>Fresh and cooling, naturally caffeine-free</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Masala Chai Latte</h4><span class="price">£3.80</span></div>
+            <p>House-spiced blend with ginger, cardamom and steamed milk</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="tab-food">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Avocado Toast</h4><span class="price">£7.50</span></div>
+            <p>Sourdough, smashed avocado, chilli flakes, poached egg, dukkah</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Granola Bowl</h4><span class="price">£6.50</span></div>
+            <p>House-made granola, coconut yoghurt, seasonal fruit, honey</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Toasted Banana Bread</h4><span class="price">£3.50</span></div>
+            <p>Warm slice, served with salted cultured butter</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Shakshuka</h4><span class="price">£9.00</span></div>
+            <p>Baked eggs in spiced tomato sauce, feta, crusty sourdough</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Smoked Salmon Bagel</h4><span class="price">£8.50</span></div>
+            <p>Cream cheese, capers, red onion, lemon — toasted or fresh</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Cheese &amp; Chutney Toastie</h4><span class="price">£6.00</span></div>
+            <p>Mature cheddar, house-made chutney, sourdough, slow-pressed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="tab-pastries">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Almond Croissant</h4><span class="price">£3.80</span></div>
+            <p>Butter-laminated, filled with frangipane, toasted almond flakes</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Cardamom Bun</h4><span class="price">£3.20</span></div>
+            <p>Swedish-style, spiced with green cardamom, pearl sugar finish</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Lemon Drizzle Slice</h4><span class="price">£3.00</span></div>
+            <p>House-baked, zingy lemon glaze, moist and not too sweet</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Pain au Chocolat</h4><span class="price">£3.20</span></div>
+            <p>Flaky layers, dark chocolate filling, baked fresh each morning</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Banana &amp; Walnut Muffin</h4><span class="price">£2.80</span></div>
+            <p>Moist, lightly spiced, topped with a walnut crumble</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header"><h4>Seasonal Tart</h4><span class="price">£4.00</span></div>
+            <p>Ask your barista — changes weekly with the season</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">The Space</span>
+        <h2>Step Inside</h2>
+      </div>
+      <!-- REPLACE: swap each src/data-src with real shop photos -->
+      <div class="gallery-grid fade-in">
+        <div class="gallery-item" data-src="https://picsum.photos/seed/cg1/1200/800">
+          <img src="https://picsum.photos/seed/cg1/800/600" alt="Coffee shop interior" loading="lazy" />
+          <div class="gallery-overlay"><span>+</span></div>
+        </div>
+        <div class="gallery-item tall" data-src="https://picsum.photos/seed/cg2/800/1200">
+          <img src="https://picsum.photos/seed/cg2/600/900" alt="Coffee being poured" loading="lazy" />
+          <div class="gallery-overlay"><span>+</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://picsum.photos/seed/cg3/1200/800">
+          <img src="https://picsum.photos/seed/cg3/800/600" alt="Pastries on display" loading="lazy" />
+          <div class="gallery-overlay"><span>+</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://picsum.photos/seed/cg4/1200/800">
+          <img src="https://picsum.photos/seed/cg4/800/600" alt="Coffee cup close up" loading="lazy" />
+          <div class="gallery-overlay"><span>+</span></div>
+        </div>
+        <div class="gallery-item wide" data-src="https://picsum.photos/seed/cg5/1600/800">
+          <img src="https://picsum.photos/seed/cg5/1200/600" alt="Shop counter" loading="lazy" />
+          <div class="gallery-overlay"><span>+</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://picsum.photos/seed/cg6/1200/800">
+          <img src="https://picsum.photos/seed/cg6/800/600" alt="Latte art" loading="lazy" />
+          <div class="gallery-overlay"><span>+</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://picsum.photos/seed/cg7/1200/800">
+          <img src="https://picsum.photos/seed/cg7/800/600" alt="Seating area" loading="lazy" />
+          <div class="gallery-overlay"><span>+</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://picsum.photos/seed/cg8/1200/800">
+          <img src="https://picsum.photos/seed/cg8/800/600" alt="Barista at work" loading="lazy" />
+          <div class="gallery-overlay"><span>+</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOURS ========== -->
+  <section class="hours-section" id="hours">
+    <div class="container hours-inner">
+      <div class="fade-in">
+        <span class="eyebrow">When To Visit</span>
+        <h2>Opening Hours</h2>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Monday</td><td>7:30am – 6:00pm</td></tr>
+            <tr><td>Tuesday</td><td>7:30am – 6:00pm</td></tr>
+            <tr><td>Wednesday</td><td>7:30am – 6:00pm</td></tr>
+            <tr><td>Thursday</td><td>7:30am – 6:00pm</td></tr>
+            <tr><td>Friday</td><td>7:30am – 6:00pm</td></tr>
+            <tr><td>Saturday</td><td>8:00am – 6:30pm</td></tr>
+            <tr class="dimmed"><td>Sunday</td><td>9:00am – 5:00pm</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-note">Last orders 15 minutes before closing. Kitchen closes at 3:00pm daily.</p>
+      </div>
+      <!-- REPLACE: swap with a real barista/atmosphere photo -->
+      <div class="hours-image fade-in">
+        <img src="https://picsum.photos/seed/coffeehours/800/600" alt="Barista preparing coffee" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FIND US ========== -->
+  <section class="find-us-section" id="find-us">
+    <div class="container find-us-inner">
+      <div class="find-us-details fade-in">
+        <span class="eyebrow">Get Here</span>
+        <h2>Find Us</h2>
+        <div class="detail-block">
+          <h4>Address</h4>
+          <!-- REPLACE: swap with real address -->
+          <p>14 Harbour Lane<br />Stokes Croft, Bristol<br />BS1 4QX</p>
+        </div>
+        <div class="detail-block">
+          <h4>Phone</h4>
+          <!-- REPLACE: swap with real phone -->
+          <p><a href="tel:01170000000">0117 000 0000</a></p>
+        </div>
+        <div class="detail-block">
+          <h4>Email</h4>
+          <!-- REPLACE: swap with real email -->
+          <p><a href="mailto:hello@emberandoak.co.uk">hello@emberandoak.co.uk</a></p>
+        </div>
+        <div class="detail-block">
+          <h4>Getting Here</h4>
+          <p>5 minutes walk from Bristol Temple Meads. Bus routes 2, 5, and 6 stop on Cheltenham Road.</p>
+        </div>
+      </div>
+      <div class="map-wrap fade-in">
+        <!-- REPLACE: generate your own embed URL at maps.google.com → Share → Embed a map -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9933.52!2d-2.5879!3d51.4545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e9ac0000001%3A0x39f92b5d3b5e11d1!2sBristol!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+          title="Ember &amp; Oak location"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">Ember <span>&</span> Oak</a>
+        <p>Slow coffee. Good company.<br />Stokes Croft, Bristol.</p>
+        <div class="social-links">
+          <!-- REPLACE: swap href with real Instagram URL -->
+          <a href="#" aria-label="Instagram" class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <!-- REPLACE: swap href with real Facebook URL -->
+          <a href="#" aria-label="Facebook" class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#hours">Hours</a></li>
+          <li><a href="#find-us">Find Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Visit Us</h5>
+        <p>14 Harbour Lane<br />Stokes Croft, Bristol<br />BS1 4QX</p>
+        <p style="margin-top:14px">Mon–Fri 7:30am – 6pm<br />Sat 8am – 6:30pm<br />Sun 9am – 5pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Ember &amp; Oak Coffee. All rights reserved.</p>
+        <p>Site by <a href="https://ryzeup.co.uk" target="_blank" rel="noopener noreferrer">RyzeUp</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer" aria-modal="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
