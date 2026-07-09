@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vérité Studio — Hair &amp; Beauty, Manchester</title>
-  <meta name="description" content="Award-winning hair salon and barber in Manchester's Northern Quarter. Cuts, colour, styling and grooming. Book your appointment today.">
+  <!-- REPLACE: update with real business name, location -->
+  <title>Vérité Studio — Cuts, Colour & Grooming, Manchester</title>
+  <meta name="description" content="Expert hair cuts, colour, and grooming in Manchester's Northern Quarter. Book your appointment at Vérité Studio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <header id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">Vérité<span>Studio</span></a>
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Vérité Studio home">
+        <span class="logo-mark">VS</span>
+        <span class="logo-name">Vérité<span class="logo-slash">/</span>Studio</span>
+      </a>
       <nav id="navLinks" aria-label="Main navigation">
-        <a href="#about"    class="nav-link">About</a>
+        <a href="#results"  class="nav-link">Results</a>
         <a href="#services" class="nav-link">Services</a>
         <a href="#gallery"  class="nav-link">Gallery</a>
-        <a href="#team"     class="nav-link">Team</a>
-        <a href="#find-us"  class="nav-link">Find Us</a>
-        <a href="#contact"  class="nav-link nav-book">Book Now</a>
+        <a href="#about"    class="nav-link">About</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+        <a href="#contact"  class="nav-book">Book Now</a>
       </nav>
       <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -30,400 +34,348 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <!-- REPLACE: swap data-bg with a high-res salon interior or hero shot -->
-  <section class="hero" id="home" data-bg="https://picsum.photos/seed/salonhero/1920/1080">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content fade-in">
-      <p class="hero-eyebrow">Manchester's Premier Styling Studio</p>
-      <h1 class="hero-title">Where Style<br><em>Becomes Art.</em></h1>
-      <p class="hero-sub">Award-winning cuts, colour, and care — tailored entirely to you.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-gold">Book an Appointment</a>
-        <a href="#services" class="btn btn-ghost">Our Services</a>
+  <!-- ===== 1. HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="hero-content">
+        <!-- REPLACE: update location text -->
+        <span class="hero-eyebrow">Northern Quarter, Manchester</span>
+        <h1 class="hero-title">Transform<br>Your Look.</h1>
+        <p class="hero-sub">Expert cuts, colour &amp; grooming — results that speak for themselves.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-accent">Book Now</a>
+          <a href="#results" class="btn btn-ghost">See the Work</a>
+        </div>
+        <div class="hero-stats">
+          <!-- REPLACE: update stats with real figures -->
+          <div class="hero-stat">
+            <strong>500+</strong>
+            <span>happy clients</span>
+          </div>
+          <div class="hero-stat">
+            <strong>6 yrs</strong>
+            <span>in the NQ</span>
+          </div>
+          <div class="hero-stat">
+            <strong>4×</strong>
+            <span>award-winning</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+    <div class="hero-right" aria-hidden="true">
+      <!-- REPLACE: swap all four images with real portfolio shots (portrait, 500×700) -->
+      <div class="hero-grid">
+        <img src="https://picsum.photos/seed/vsgrid1/500/700" alt="" loading="eager">
+        <img src="https://picsum.photos/seed/vsgrid2/500/700" alt="" loading="eager">
+        <img src="https://picsum.photos/seed/vsgrid3/500/700" alt="" loading="lazy">
+        <img src="https://picsum.photos/seed/vsgrid4/500/700" alt="" loading="lazy">
+      </div>
+    </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="about section">
+  <!-- ===== 2. BEFORE / AFTER ===== -->
+  <section class="ba-section" id="results">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="tag">Real Results</span>
+        <h2>Before &amp; After</h2>
+        <p>Drag the handle to compare. Every transformation below is our work.</p>
+      </div>
+      <!-- REPLACE: swap all before/after image pairs with real client photos -->
+      <div class="ba-grid">
+        <div class="ba-pair fade-in" style="--pos:50%" data-title="Colour transformation — balayage">
+          <div class="ba-before">
+            <img src="https://picsum.photos/seed/vsb1/600/800" alt="Before — colour transformation" loading="lazy">
+          </div>
+          <div class="ba-after">
+            <img src="https://picsum.photos/seed/vsa1/600/800" alt="After — colour transformation" loading="lazy">
+          </div>
+          <div class="ba-track">
+            <div class="ba-handle">
+              <div class="ba-knob" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M7 10l-4 4 4 4V14h6v4l4-4-4-4v4H7v-4zm6-10v4H7V0L3 4l4 4V4h6v4l4-4-4-4z"/></svg>
+              </div>
+            </div>
+          </div>
+          <span class="ba-lbl ba-lbl-l">Before</span>
+          <span class="ba-lbl ba-lbl-r">After</span>
+          <span class="ba-title">Colour transformation</span>
+        </div>
+        <div class="ba-pair fade-in" style="--pos:50%" data-title="Cut &amp; restyle — length &amp; texture">
+          <div class="ba-before">
+            <img src="https://picsum.photos/seed/vsb2/600/800" alt="Before — cut and restyle" loading="lazy">
+          </div>
+          <div class="ba-after">
+            <img src="https://picsum.photos/seed/vsa2/600/800" alt="After — cut and restyle" loading="lazy">
+          </div>
+          <div class="ba-track">
+            <div class="ba-handle">
+              <div class="ba-knob" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M7 10l-4 4 4 4V14h6v4l4-4-4-4v4H7v-4zm6-10v4H7V0L3 4l4 4V4h6v4l4-4-4-4z"/></svg>
+              </div>
+            </div>
+          </div>
+          <span class="ba-lbl ba-lbl-l">Before</span>
+          <span class="ba-lbl ba-lbl-r">After</span>
+          <span class="ba-title">Cut &amp; restyle</span>
+        </div>
+        <div class="ba-pair fade-in" style="--pos:50%" data-title="Gents skin fade &amp; shape">
+          <div class="ba-before">
+            <img src="https://picsum.photos/seed/vsb3/600/800" alt="Before — gents skin fade" loading="lazy">
+          </div>
+          <div class="ba-after">
+            <img src="https://picsum.photos/seed/vsa3/600/800" alt="After — gents skin fade" loading="lazy">
+          </div>
+          <div class="ba-track">
+            <div class="ba-handle">
+              <div class="ba-knob" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M7 10l-4 4 4 4V14h6v4l4-4-4-4v4H7v-4zm6-10v4H7V0L3 4l4 4V4h6v4l4-4-4-4z"/></svg>
+              </div>
+            </div>
+          </div>
+          <span class="ba-lbl ba-lbl-l">Before</span>
+          <span class="ba-lbl ba-lbl-r">After</span>
+          <span class="ba-title">Gents skin fade</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. SERVICES & PRICING (white section) ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="tag">Transparent Pricing</span>
+        <h2>Services &amp; Prices</h2>
+        <p>All prices are a guide — your stylist confirms at consultation. Colour consultation is always free.</p>
+      </div>
+      <!-- REPLACE: update service names and prices to match real offerings -->
+      <div class="price-columns fade-in">
+        <div class="price-col">
+          <div class="price-block">
+            <h3 class="price-cat"><span class="cat-dot" aria-hidden="true">●</span> Cuts</h3>
+            <div class="price-list">
+              <div class="pr-row"><span class="pr-name">Signature Cut &amp; Style</span><span class="pr-price">from £55</span></div>
+              <div class="pr-row"><span class="pr-name">Gents Cut</span><span class="pr-price">£35</span></div>
+              <div class="pr-row"><span class="pr-name">Cut &amp; Blowdry</span><span class="pr-price">from £45</span></div>
+              <div class="pr-row"><span class="pr-name">Restyle</span><span class="pr-price">from £65</span></div>
+            </div>
+          </div>
+          <div class="price-block">
+            <h3 class="price-cat"><span class="cat-dot" aria-hidden="true">●</span> Styling</h3>
+            <div class="price-list">
+              <div class="pr-row"><span class="pr-name">Blowdry &amp; Style</span><span class="pr-price">from £40</span></div>
+              <div class="pr-row"><span class="pr-name">Occasion Updo</span><span class="pr-price">from £65</span></div>
+              <div class="pr-row"><span class="pr-name">Express Style</span><span class="pr-price">£25</span></div>
+              <div class="pr-row"><span class="pr-name">Hair Treatment</span><span class="pr-price">from £30</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="price-divider" aria-hidden="true"></div>
+        <div class="price-col">
+          <div class="price-block">
+            <h3 class="price-cat"><span class="cat-dot" aria-hidden="true">●</span> Colour</h3>
+            <div class="price-list">
+              <div class="pr-row"><span class="pr-name">Full Colour</span><span class="pr-price">from £85</span></div>
+              <div class="pr-row"><span class="pr-name">Balayage</span><span class="pr-price">from £120</span></div>
+              <div class="pr-row"><span class="pr-name">Highlights &amp; Foils</span><span class="pr-price">from £95</span></div>
+              <div class="pr-row"><span class="pr-name">Gloss &amp; Toner</span><span class="pr-price">from £45</span></div>
+            </div>
+          </div>
+          <div class="price-block">
+            <h3 class="price-cat"><span class="cat-dot" aria-hidden="true">●</span> Beard &amp; Groom</h3>
+            <div class="price-list">
+              <div class="pr-row"><span class="pr-name">Hot Towel Shave</span><span class="pr-price">£35</span></div>
+              <div class="pr-row"><span class="pr-name">Beard Trim &amp; Shape</span><span class="pr-price">£18</span></div>
+              <div class="pr-row"><span class="pr-name">Gents Cut + Beard</span><span class="pr-price">£48</span></div>
+              <div class="pr-row"><span class="pr-name">Skin Fade</span><span class="pr-price">from £32</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="price-footer fade-in">Not sure which service you need? <a href="#contact">Book a free consultation</a> — no commitment required.</p>
+    </div>
+  </section>
+
+  <!-- ===== 4. GALLERY (secondary) ===== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="tag">Portfolio</span>
+        <h2>The Work</h2>
+      </div>
+      <!-- REPLACE: swap all images with real portfolio photos -->
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in" data-index="0" data-src="https://picsum.photos/seed/vsgal1/800/1067">
+          <img src="https://picsum.photos/seed/vsgal1/400/533" alt="Portfolio shot 1" loading="lazy">
+          <div class="gallery-cover"><span>View</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="1" data-src="https://picsum.photos/seed/vsgal2/800/1067">
+          <img src="https://picsum.photos/seed/vsgal2/400/533" alt="Portfolio shot 2" loading="lazy">
+          <div class="gallery-cover"><span>View</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="2" data-src="https://picsum.photos/seed/vsgal3/800/1067">
+          <img src="https://picsum.photos/seed/vsgal3/400/533" alt="Portfolio shot 3" loading="lazy">
+          <div class="gallery-cover"><span>View</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="3" data-src="https://picsum.photos/seed/vsgal4/800/1067">
+          <img src="https://picsum.photos/seed/vsgal4/400/533" alt="Portfolio shot 4" loading="lazy">
+          <div class="gallery-cover"><span>View</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="4" data-src="https://picsum.photos/seed/vsgal5/800/1067">
+          <img src="https://picsum.photos/seed/vsgal5/400/533" alt="Portfolio shot 5" loading="lazy">
+          <div class="gallery-cover"><span>View</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="5" data-src="https://picsum.photos/seed/vsgal6/800/1067">
+          <img src="https://picsum.photos/seed/vsgal6/400/533" alt="Portfolio shot 6" loading="lazy">
+          <div class="gallery-cover"><span>View</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. ABOUT / TEAM (brief) ===== -->
+  <section class="about" id="about">
     <div class="container about-grid">
       <div class="about-text fade-in">
-        <span class="section-tag">Our Story</span>
-        <h2>Craft. Confidence.<br><em>Character.</em></h2>
-        <p>Vérité Studio was born from a simple belief: every client deserves a style that's unapologetically theirs. Founded in 2018 in the heart of Manchester's Northern Quarter, we've built a reputation for precision cuts, transformative colour, and a level of care that keeps clients coming back.</p>
-        <p>Our team of award-winning stylists and master barbers blend technical expertise with genuine creativity. Whether you're after a bold reinvention or a flawless maintenance cut, we take the time to understand your lifestyle, your texture, your vision.</p>
-        <p>We use only premium colour lines and professional-grade tools — because great results start with great ingredients.</p>
-        <a href="#services" class="btn btn-outline">Explore Services</a>
+        <span class="tag">The Studio</span>
+        <h2>About<br>Vérité.</h2>
+        <!-- REPLACE: update with real story and details -->
+        <p>Founded in 2018, Vérité Studio sits in the heart of Manchester's Northern Quarter. We built the studio around one principle: your cut should work every morning, not just when you leave the chair.</p>
+        <p>We specialise in precision cuts, lived-in colour, and sharp grooming. No upselling, no fuss — just consistent, honest results from a team that knows its craft.</p>
+        <a href="#contact" class="btn btn-accent" style="margin-top:24px">Book an Appointment</a>
       </div>
-      <div class="about-image fade-in">
-        <!-- REPLACE: swap with real salon interior or stylist-at-work photo -->
-        <img src="https://picsum.photos/seed/salonabout/800/960" alt="Vérité Studio interior" loading="lazy">
-        <div class="about-badge">
-          <span class="badge-number">6+</span>
-          <span class="badge-label">Years in Manchester</span>
+      <div class="team-list fade-in">
+        <h3 class="team-heading">The Team</h3>
+        <!-- REPLACE: update with real team members and credentials -->
+        <div class="team-entry">
+          <div class="team-name-row">
+            <strong>Léa Fontaine</strong>
+            <span class="team-years">12 yrs</span>
+          </div>
+          <span class="team-role">Creative Director &amp; Colour Specialist</span>
+          <span class="team-note">4× international colour award winner</span>
+        </div>
+        <div class="team-entry">
+          <div class="team-name-row">
+            <strong>Marcus Reid</strong>
+            <span class="team-years">9 yrs</span>
+          </div>
+          <span class="team-role">Master Barber</span>
+          <span class="team-note">Precision fades &amp; classic shaves</span>
+        </div>
+        <div class="team-entry">
+          <div class="team-name-row">
+            <strong>Yumi Tanaka</strong>
+            <span class="team-years">7 yrs</span>
+          </div>
+          <span class="team-role">Senior Stylist</span>
+          <span class="team-note">Texture, movement &amp; blowdry specialist</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SERVICES & PRICING ===== -->
-  <section id="services" class="services section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-tag">What We Offer</span>
-        <h2>Services &amp; Pricing</h2>
-        <p>All prices are a guide — your stylist will confirm at consultation.</p>
-      </div>
-      <div class="service-tabs fade-in">
-        <button class="stab-btn active" data-tab="cuts">Cuts</button>
-        <button class="stab-btn" data-tab="colour">Colour</button>
-        <button class="stab-btn" data-tab="styling">Styling</button>
-        <button class="stab-btn" data-tab="groom">Groom</button>
-      </div>
-
-      <div class="service-panels">
-        <!-- CUTS -->
-        <div class="service-panel active" id="stab-cuts">
-          <div class="service-grid">
-            <div class="service-card">
-              <div class="sc-top"><h3>Signature Cut &amp; Style</h3><span class="sc-price">from £55</span></div>
-              <p>Full consultation, precision cut, blowdry and style finish.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Gents Cut</h3><span class="sc-price">£35</span></div>
-              <p>Classic or modern cut, finish with styling product.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Cut &amp; Blowdry</h3><span class="sc-price">from £45</span></div>
-              <p>Tailored cut followed by a smooth blowdry finish.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Restyle</h3><span class="sc-price">from £65</span></div>
-              <p>Major length or shape change — full consultation included.</p>
-            </div>
-          </div>
-        </div>
-        <!-- COLOUR -->
-        <div class="service-panel" id="stab-colour">
-          <div class="service-grid">
-            <div class="service-card">
-              <div class="sc-top"><h3>Full Colour</h3><span class="sc-price">from £85</span></div>
-              <p>All-over root-to-tip colour with toner finish.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Balayage</h3><span class="sc-price">from £120</span></div>
-              <p>Hand-painted highlights for a natural, sun-kissed result.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Highlights / Foils</h3><span class="sc-price">from £95</span></div>
-              <p>Partial or full-head foil highlights, any shade.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Gloss &amp; Toner</h3><span class="sc-price">from £45</span></div>
-              <p>Shine-boosting gloss or corrective toner treatment.</p>
-            </div>
-          </div>
-        </div>
-        <!-- STYLING -->
-        <div class="service-panel" id="stab-styling">
-          <div class="service-grid">
-            <div class="service-card">
-              <div class="sc-top"><h3>Blowdry &amp; Style</h3><span class="sc-price">from £40</span></div>
-              <p>A polished finish — straight, wavy, or voluminous.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Occasion Updo</h3><span class="sc-price">from £65</span></div>
-              <p>Wedding, prom, or event-ready upstyles.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Express Style</h3><span class="sc-price">£25</span></div>
-              <p>Quick refresh and tidy — 30 minutes, great results.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Hair Treatment</h3><span class="sc-price">from £30</span></div>
-              <p>Deep conditioning, Olaplex, or keratin treatment.</p>
-            </div>
-          </div>
-        </div>
-        <!-- GROOM -->
-        <div class="service-panel" id="stab-groom">
-          <div class="service-grid">
-            <div class="service-card">
-              <div class="sc-top"><h3>Hot Towel Shave</h3><span class="sc-price">£35</span></div>
-              <p>Classic wet shave with hot towel and straight razor finish.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Beard Trim &amp; Shape</h3><span class="sc-price">£18</span></div>
-              <p>Sculpted, clean lines — scissor or clipper finish.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Gents Cut + Beard</h3><span class="sc-price">£48</span></div>
-              <p>Full cut and beard combo for the complete look.</p>
-            </div>
-            <div class="service-card">
-              <div class="sc-top"><h3>Skin Fade</h3><span class="sc-price">from £32</span></div>
-              <p>High, mid, or low fade — sharp, clean, and precise.</p>
-            </div>
-          </div>
+  <!-- ===== 6. HOURS + LOCATION ===== -->
+  <section class="location" id="location">
+    <div class="container location-grid">
+      <div class="hours-block fade-in">
+        <span class="tag">We're Open</span>
+        <h2>Hours</h2>
+        <!-- REPLACE: update with real opening hours -->
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Monday</td><td class="closed">Closed</td></tr>
+            <tr><td>Tue – Wed</td><td>10:00 – 18:00</td></tr>
+            <tr class="hl-row"><td>Thu – Fri</td><td>10:00 – 20:00</td></tr>
+            <tr class="hl-row"><td>Saturday</td><td>09:00 – 18:00</td></tr>
+            <tr><td>Sunday</td><td>10:00 – 16:00</td></tr>
+          </tbody>
+        </table>
+        <div class="address-block">
+          <!-- REPLACE: update with real address and phone -->
+          <p>32 Tib Street<br>Northern Quarter<br>Manchester, M4 1LA</p>
+          <a href="tel:+441612345678" class="phone-link">0161 234 5678</a>
         </div>
       </div>
-
-      <p class="services-note fade-in">Colour consultation is always complimentary. <a href="#contact">Get in touch</a> to discuss your vision before booking.</p>
-    </div>
-  </section>
-
-  <!-- ===== GALLERY ===== -->
-  <section id="gallery" class="gallery-section section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-tag">The Work</span>
-        <h2>Gallery</h2>
-        <p>A selection of our favourite transformations. Click any image to expand — look for the <strong>Before / After</strong> badge.</p>
-      </div>
-    </div>
-    <!-- REPLACE: swap all src + data-src values with real work photos -->
-    <div class="gallery-grid">
-      <div class="gallery-item tall" data-index="0" data-src="https://picsum.photos/seed/salon1/800/1200">
-        <img src="https://picsum.photos/seed/salon1/600/900" alt="Salon style 1" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-      </div>
-      <div class="gallery-item" data-index="1" data-src="https://picsum.photos/seed/salon2/800/600">
-        <img src="https://picsum.photos/seed/salon2/600/450" alt="Salon style 2" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-      </div>
-      <div class="gallery-item" data-index="2" data-src="https://picsum.photos/seed/salon3/800/600">
-        <img src="https://picsum.photos/seed/salon3/600/450" alt="Salon style 3" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-      </div>
-      <div class="gallery-item before-after" data-index="3"
-           data-src="https://picsum.photos/seed/salonafter1/800/800"
-           data-before-src="https://picsum.photos/seed/salonbefore1/800/800">
-        <img src="https://picsum.photos/seed/salonafter1/600/600" alt="Colour transformation — after" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-        <span class="ba-badge">Before / After</span>
-      </div>
-      <div class="gallery-item wide" data-index="4" data-src="https://picsum.photos/seed/salon4/1200/800">
-        <img src="https://picsum.photos/seed/salon4/900/600" alt="Salon style 4" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-      </div>
-      <div class="gallery-item" data-index="5" data-src="https://picsum.photos/seed/salon5/800/600">
-        <img src="https://picsum.photos/seed/salon5/600/450" alt="Salon style 5" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-      </div>
-      <div class="gallery-item" data-index="6" data-src="https://picsum.photos/seed/salon6/800/600">
-        <img src="https://picsum.photos/seed/salon6/600/450" alt="Salon style 6" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-      </div>
-      <div class="gallery-item before-after" data-index="7"
-           data-src="https://picsum.photos/seed/salonafter2/800/800"
-           data-before-src="https://picsum.photos/seed/salonbefore2/800/800">
-        <img src="https://picsum.photos/seed/salonafter2/600/600" alt="Cut transformation — after" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-        <span class="ba-badge">Before / After</span>
-      </div>
-      <div class="gallery-item tall" data-index="8" data-src="https://picsum.photos/seed/salon7/800/1200">
-        <img src="https://picsum.photos/seed/salon7/600/900" alt="Salon style 7" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
-      </div>
-      <div class="gallery-item" data-index="9" data-src="https://picsum.photos/seed/salon8/800/600">
-        <img src="https://picsum.photos/seed/salon8/600/450" alt="Salon style 8" loading="lazy">
-        <div class="gallery-overlay"><span>View</span></div>
+      <div class="map-wrap fade-in">
+        <!-- REPLACE: generate your own embed at maps.google.com → Share → Embed a map -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9494.612137406432!2d-2.2426!3d53.4808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd07b5aa3a3e75b9d!2sNorthern%20Quarter%2C%20Manchester!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+          width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Vérité Studio location — Northern Quarter, Manchester">
+        </iframe>
       </div>
     </div>
   </section>
 
-  <!-- ===== TEAM ===== -->
-  <section id="team" class="team section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-tag">The Team</span>
-        <h2>Meet Your Stylists</h2>
-        <p>Passionate, skilled, and genuinely invested in your look.</p>
+  <!-- ===== 7. CONTACT / BOOKING ===== -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-text fade-in">
+        <span class="tag">Book</span>
+        <h2>Get in the Chair.</h2>
+        <p>Fill in the form — we'll confirm your slot within a few hours. Same-day bookings: call us directly.</p>
+        <!-- REPLACE: update phone number -->
+        <a href="tel:+441612345678" class="phone-link" style="margin-top:20px;display:inline-block">0161 234 5678</a>
+        <p class="contact-note">💡 Full online booking system available — ask us about real-time scheduling.</p>
       </div>
-      <div class="team-grid">
-        <!-- REPLACE: swap all team photos with real headshots -->
-        <div class="team-card fade-in">
-          <div class="team-photo">
-            <img src="https://picsum.photos/seed/salonteam1/400/500" alt="Léa Fontaine" loading="lazy">
-          </div>
-          <div class="team-info">
-            <h3>Léa Fontaine</h3>
-            <span class="team-role">Creative Director &amp; Colour Specialist</span>
-            <p>12 years in the industry, 4 international awards. Léa's signature is bold, wearable colour — she turns visions into reality.</p>
-          </div>
-        </div>
-        <div class="team-card fade-in">
-          <div class="team-photo">
-            <img src="https://picsum.photos/seed/salonteam2/400/500" alt="Marcus Reid" loading="lazy">
-          </div>
-          <div class="team-info">
-            <h3>Marcus Reid</h3>
-            <span class="team-role">Master Barber</span>
-            <p>Precision fades, classic cuts, and immaculate beard work. Marcus brings barbershop tradition to a modern studio setting.</p>
-          </div>
-        </div>
-        <div class="team-card fade-in">
-          <div class="team-photo">
-            <img src="https://picsum.photos/seed/salonteam3/400/500" alt="Yumi Tanaka" loading="lazy">
-          </div>
-          <div class="team-info">
-            <h3>Yumi Tanaka</h3>
-            <span class="team-role">Senior Stylist &amp; Blowdry Artist</span>
-            <p>Specialising in texture, movement, and lived-in styles. Yumi's blowdrys are nothing short of transformative.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== OPENING HOURS ===== -->
-  <section id="hours" class="hours section">
-    <div class="container">
-      <div class="hours-inner fade-in">
-        <div class="hours-text">
-          <span class="section-tag">We're Open</span>
-          <h2>Opening Hours</h2>
-          <p>Walk-ins welcome subject to availability — booking ahead guarantees your preferred stylist.</p>
-          <a href="#contact" class="btn btn-gold">Book Now</a>
-        </div>
-        <div class="hours-table-wrap">
-          <!-- REPLACE: update with real opening times -->
-          <table class="hours-table">
-            <tbody>
-              <tr><td>Monday</td><td class="closed">Closed</td></tr>
-              <tr><td>Tuesday – Wednesday</td><td>10:00 – 18:00</td></tr>
-              <tr class="highlight-row"><td>Thursday – Friday</td><td>10:00 – 20:00</td></tr>
-              <tr class="highlight-row"><td>Saturday</td><td>09:00 – 18:00</td></tr>
-              <tr><td>Sunday</td><td>10:00 – 16:00</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FIND US ===== -->
-  <section id="find-us" class="find-us section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-tag">Find Us</span>
-        <h2>Where We Are</h2>
-      </div>
-      <div class="find-us-grid">
-        <div class="find-us-info fade-in">
-          <div class="contact-detail">
-            <span class="detail-icon">📍</span>
-            <div>
-              <strong>Address</strong>
-              <!-- REPLACE: update with real address -->
-              <p>32 Tib Street<br>Northern Quarter<br>Manchester, M4 1LA</p>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <span class="detail-icon">📞</span>
-            <div>
-              <strong>Phone</strong>
-              <!-- REPLACE: update with real phone number -->
-              <p><a href="tel:+441612345678">0161 234 5678</a></p>
-              <small>Tap to call from mobile</small>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <span class="detail-icon">✉️</span>
-            <div>
-              <strong>Email</strong>
-              <!-- REPLACE: update with real email -->
-              <p><a href="mailto:hello@veritestudio.co.uk">hello@veritestudio.co.uk</a></p>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <span class="detail-icon">🚍</span>
-            <div>
-              <strong>Getting Here</strong>
-              <p>Tram: Piccadilly Gardens (5 min walk). Bus: routes 41, 42, 43 stop on Oldham Street.</p>
-            </div>
-          </div>
-        </div>
-        <div class="map-wrap fade-in">
-          <!-- REPLACE: generate your own embed at maps.google.com → Share → Embed a map -->
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9494.612137406432!2d-2.2426!3d53.4808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd07b5aa3a3e75b9d!2sNorthern%20Quarter%2C%20Manchester!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
-            width="600" height="420" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Vérité Studio — Northern Quarter, Manchester">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT / BOOKING ===== -->
-  <section id="contact" class="contact-section section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-text fade-in">
-          <span class="section-tag">Get in Touch</span>
-          <h2>Book Your Appointment</h2>
-          <p>Fill in the form and we'll confirm your slot within 24 hours. For same-day bookings, please call us directly.</p>
-          <p class="contact-note">💡 Full online booking system integration available — ask us about real-time scheduling.</p>
-        </div>
-        <!-- REPLACE: update action URL with your real Formspree endpoint -->
-        <form id="contactForm" class="contact-form fade-in"
-              action="https://formspree.io/f/REPLACE_WITH_FORM_ID"
-              method="POST" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="cf-name">Full Name *</label>
-              <input type="text" id="cf-name" name="name" required placeholder="Jane Smith">
-            </div>
-            <div class="form-group">
-              <label for="cf-phone">Phone Number</label>
-              <input type="tel" id="cf-phone" name="phone" placeholder="07700 900000">
-            </div>
+      <!-- REPLACE: update action URL with your Formspree endpoint -->
+      <form id="contactForm" class="contact-form fade-in"
+            action="https://formspree.io/f/REPLACE_WITH_FORM_ID"
+            method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Name *</label>
+            <input type="text" id="cf-name" name="name" required placeholder="Jane Smith">
           </div>
           <div class="form-group">
-            <label for="cf-email">Email Address *</label>
-            <input type="email" id="cf-email" name="email" required placeholder="jane@example.com">
+            <label for="cf-phone">Phone</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="07700 900000">
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="cf-service">Service</label>
-              <select id="cf-service" name="service">
-                <option value="">Select a service…</option>
-                <option>Signature Cut &amp; Style</option>
-                <option>Gents Cut</option>
-                <option>Full Colour</option>
-                <option>Balayage</option>
-                <option>Blowdry &amp; Style</option>
-                <option>Hot Towel Shave</option>
-                <option>Other / Not Sure</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="cf-date">Preferred Date</label>
-              <input type="date" id="cf-date" name="preferred_date">
-            </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email *</label>
+          <input type="email" id="cf-email" name="email" required placeholder="jane@example.com">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-service">Service</label>
+            <select id="cf-service" name="service">
+              <option value="">Select a service…</option>
+              <option>Signature Cut &amp; Style</option>
+              <option>Gents Cut</option>
+              <option>Full Colour</option>
+              <option>Balayage</option>
+              <option>Blowdry &amp; Style</option>
+              <option>Hot Towel Shave</option>
+              <option>Skin Fade</option>
+              <option>Other / Not sure</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="cf-message">Message / Requests</label>
-            <textarea id="cf-message" name="message" rows="4"
-              placeholder="Tell us about your vision, hair type, or any questions…"></textarea>
+            <label for="cf-date">Preferred Date</label>
+            <input type="date" id="cf-date" name="preferred_date">
           </div>
-          <button type="submit" class="btn btn-gold btn-full" id="formSubmit">
-            <span class="btn-label">Send Request</span>
-            <span class="btn-spinner" hidden aria-live="polite">Sending…</span>
-          </button>
-          <p class="form-feedback success" id="formSuccess" hidden role="alert">
-            ✓ Request received! We'll confirm your appointment within 24 hours.
-          </p>
-          <p class="form-feedback error" id="formError" hidden role="alert">
-            Something went wrong — please call us directly or try again.
-          </p>
-        </form>
-      </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Anything we should know</label>
+          <textarea id="cf-message" name="message" rows="3"
+            placeholder="Hair type, desired look, references — anything helpful…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent btn-full" id="formSubmit">
+          <span class="btn-label">Send Booking Request</span>
+          <span class="btn-spinner" hidden aria-live="polite">Sending…</span>
+        </button>
+        <p class="form-feedback success" id="formSuccess" hidden role="alert">
+          ✓ Request received — we'll confirm your slot shortly.
+        </p>
+        <p class="form-feedback error" id="formError" hidden role="alert">
+          Something went wrong. Call us directly on 0161 234 5678.
+        </p>
+      </form>
     </div>
   </section>
 
@@ -431,38 +383,26 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <p class="footer-logo">Vérité<span>Studio</span></p>
-        <!-- REPLACE: update address, phone, email with real details -->
+        <p class="footer-logo">VS<span>/</span>Vérité Studio</p>
+        <!-- REPLACE: update address -->
         <p>32 Tib Street, Northern Quarter<br>Manchester, M4 1LA</p>
-        <p style="margin-top:8px"><a href="tel:+441612345678">0161 234 5678</a></p>
-        <p><a href="mailto:hello@veritestudio.co.uk">hello@veritestudio.co.uk</a></p>
+        <a href="tel:+441612345678">0161 234 5678</a>
       </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="#about">About</a>
+      <div class="footer-nav">
+        <a href="#results">Results</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
-        <a href="#team">Team</a>
+        <a href="#about">About</a>
         <a href="#contact">Book Now</a>
       </div>
       <div class="footer-social">
-        <h4>Follow Us</h4>
-        <div class="social-row">
-          <!-- REPLACE: update href with real Instagram profile URL -->
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-             class="social-btn" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <!-- REPLACE: update href with real Facebook page URL -->
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-             class="social-btn" aria-label="Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-        </div>
+        <!-- REPLACE: update social links -->
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -471,15 +411,18 @@
   </footer>
 
   <!-- ===== LIGHTBOX ===== -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
-    <button class="lb-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
-    <button class="lb-nav lb-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
-    <div class="lb-img-wrap">
-      <img id="lightboxImg" src="" alt="Gallery image enlarged">
-      <button class="lb-ba-toggle" id="lbBaToggle" hidden>View Before</button>
-    </div>
-    <button class="lb-nav lb-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Portfolio image">
+    <button class="lb-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lb-nav lb-next" id="lightboxNext" aria-label="Next">&#8250;</button>
   </div>
+
+  <!-- ===== STICKY BOOK NOW ===== -->
+  <a href="#contact" class="book-sticky" id="bookSticky" aria-label="Book an appointment">
+    Book Now
+    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 01.5-.5h11.793l-3.147-3.146a.5.5 0 01.708-.708l4 4a.5.5 0 010 .708l-4 4a.5.5 0 01-.708-.708L13.293 8.5H1.5A.5.5 0 011 8z"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
