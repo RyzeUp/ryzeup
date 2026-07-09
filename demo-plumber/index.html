@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- REPLACE: update title with real business name, location -->
+  <title>FlowRight Plumbing &amp; Heating — Staffordshire</title>
+  <meta name="description" content="Reliable, fully insured plumber and heating engineer in Staffordshire. Boiler repairs, emergency callouts, bathroom installations. Call 01889 123 456.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <!-- REPLACE: update business name, phone number, and nav links throughout -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-name">FlowRight</span>
+          <span class="logo-sub">Plumbing &amp; Heating</span>
+        </div>
+      </a>
+      <nav id="navLinks" aria-label="Main navigation">
+        <a href="#services"     class="nav-link">Services</a>
+        <a href="#gallery"      class="nav-link">Our Work</a>
+        <a href="#why-us"       class="nav-link">Why Us</a>
+        <a href="#service-area" class="nav-link">Areas</a>
+        <a href="#contact"      class="nav-link">Free Quote</a>
+        <!-- REPLACE: update with real phone number -->
+        <a href="tel:+441889123456" class="nav-phone-mobile">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/>
+          </svg>
+          01889 123 456
+        </a>
+      </nav>
+      <!-- REPLACE: update phone number -->
+      <a href="tel:+441889123456" class="nav-phone" aria-label="Call us on 01889 123 456">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/>
+        </svg>
+        <span>01889 123 456</span>
+      </a>
+      <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <!-- REPLACE: swap data-bg with a high-res photo of a plumber at work, a branded van, or a completed job -->
+  <section class="hero" id="home" data-bg="https://picsum.photos/seed/plumberhero/1920/1080">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">⚡ 24/7 Emergency Callouts Available</div>
+      <h1 class="hero-title">Staffordshire's<br>Trusted Plumber</h1>
+      <p class="hero-tagline">Reliable &nbsp;·&nbsp; Fully Insured &nbsp;·&nbsp; Gas Safe Registered</p>
+      <div class="hero-actions">
+        <!-- REPLACE: update phone number in href and text -->
+        <a href="tel:+441889123456" class="btn btn-yellow">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/>
+          </svg>
+          Call Now — 01889 123 456
+        </a>
+        <a href="#contact" class="btn btn-outline">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <section class="trust-bar" aria-label="Trust credentials">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+          </svg>
+          <div>
+            <strong>Fully Insured</strong>
+            <span>£2M Public Liability</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <!-- REPLACE: gas safe flame icon -->
+            <path d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/>
+            <path d="M10.5 7.963a8.25 8.25 0 0011.25 7.89 8.251 8.251 0 01-14.93-5.1c0-.956.162-1.874.459-2.726A8.25 8.25 0 0010.5 7.963z"/>
+          </svg>
+          <div>
+            <strong>Gas Safe Registered</strong>
+            <!-- REPLACE: update with real Gas Safe registration number -->
+            <span>Reg. No. 629847</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <div>
+            <strong>10+ Years' Experience</strong>
+            <span>Local &amp; reliable</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+          </svg>
+          <div>
+            <strong>5-Star Rated</strong>
+            <span>100+ verified reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">What We Do</span>
+        <h2>Our Services</h2>
+        <p>We quote per job — no hidden call-out charges, no nasty surprises. Call for a free estimate.</p>
+      </div>
+      <!-- REPLACE: update services to match real business offerings -->
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/>
+              <path d="M10.5 7.963a8.25 8.25 0 0011.25 7.89 8.251 8.251 0 01-14.93-5.1c0-.956.162-1.874.459-2.726A8.25 8.25 0 0010.5 7.963z"/>
+            </svg>
+          </div>
+          <h3>Boiler Repair &amp; Service</h3>
+          <p>Fault diagnosis, repairs, and annual servicing on all makes and models. Keeping your boiler running safely and efficiently.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+            </svg>
+          </div>
+          <h3>Emergency Plumbing</h3>
+          <p>Burst pipes, leaks, no hot water — we offer same-day response across Staffordshire, 7 days a week including bank holidays.</p>
+          <a href="tel:+441889123456" class="service-link service-link-call">📞 Call Now →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v1.5M6.75 5.25l1.06 1.06M17.25 5.25l-1.06 1.06M4.5 12h15M5.25 12v6.75a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25V12"/>
+            </svg>
+          </div>
+          <h3>Bathroom Installations</h3>
+          <p>Full bathroom and en-suite fits from design to completion. Supply-and-fit or labour-only — we work around your schedule.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="1"/>
+              <path d="M6 7V5a2 2 0 012-2h8a2 2 0 012 2v2M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01"/>
+            </svg>
+          </div>
+          <h3>Central Heating</h3>
+          <p>New system installations, radiator replacements, and system upgrades. We design for maximum efficiency and long-term reliability.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2a8 8 0 00-8 8c0 6 8 13 8 13s8-7 8-13a8 8 0 00-8-8z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3>Hot Water Cylinders</h3>
+          <p>Unvented and vented cylinder supply, install, and servicing. Upgrade to a modern system and cut your energy bills.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 6h18M7 6V4a1 1 0 011-1h8a1 1 0 011 1v2M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/>
+              <path d="M10 11v6M14 11v6"/>
+            </svg>
+          </div>
+          <h3>Drain Clearance</h3>
+          <p>Blocked sinks, toilets, and external drains cleared fast. CCTV drain surveys available. No mess left behind.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPLETED WORK GALLERY ===== -->
+  <section id="gallery" class="gallery-section section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Completed Jobs</span>
+        <h2>Our Work</h2>
+        <p>Every job finished to a high standard — see for yourself. Click any photo to enlarge.</p>
+      </div>
+      <!-- REPLACE: swap all src and data-src with real photos of your completed jobs -->
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in" data-index="0"
+             data-src="https://picsum.photos/seed/plumber1/900/700"
+             data-caption="Full bathroom refit — Uttoxeter">
+          <img src="https://picsum.photos/seed/plumber1/600/450" alt="Bathroom refit" loading="lazy">
+          <div class="gallery-caption">Full bathroom refit — Uttoxeter</div>
+          <div class="gallery-hover">
+            <span>View Photo</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-index="1"
+             data-src="https://picsum.photos/seed/plumber2/900/700"
+             data-caption="Combi boiler installation — Burton upon Trent">
+          <img src="https://picsum.photos/seed/plumber2/600/450" alt="Boiler installation" loading="lazy">
+          <div class="gallery-caption">Combi boiler installation — Burton upon Trent</div>
+          <div class="gallery-hover"><span>View Photo</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="2"
+             data-src="https://picsum.photos/seed/plumber3/900/700"
+             data-caption="Central heating system — Lichfield">
+          <img src="https://picsum.photos/seed/plumber3/600/450" alt="Central heating" loading="lazy">
+          <div class="gallery-caption">Central heating system — Lichfield</div>
+          <div class="gallery-hover"><span>View Photo</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="3"
+             data-src="https://picsum.photos/seed/plumber4/900/700"
+             data-caption="Emergency leak repair — Tamworth">
+          <img src="https://picsum.photos/seed/plumber4/600/450" alt="Emergency repair" loading="lazy">
+          <div class="gallery-caption">Emergency leak repair — Tamworth</div>
+          <div class="gallery-hover"><span>View Photo</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="4"
+             data-src="https://picsum.photos/seed/plumber5/900/700"
+             data-caption="Outdoor tap &amp; pipework — Rugeley">
+          <img src="https://picsum.photos/seed/plumber5/600/450" alt="Outdoor tap" loading="lazy">
+          <div class="gallery-caption">Outdoor tap &amp; pipework — Rugeley</div>
+          <div class="gallery-hover"><span>View Photo</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="5"
+             data-src="https://picsum.photos/seed/plumber6/900/700"
+             data-caption="En-suite bathroom — Stafford">
+          <img src="https://picsum.photos/seed/plumber6/600/450" alt="En-suite bathroom" loading="lazy">
+          <div class="gallery-caption">En-suite bathroom — Stafford</div>
+          <div class="gallery-hover"><span>View Photo</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="6"
+             data-src="https://picsum.photos/seed/plumber7/900/700"
+             data-caption="Power flush &amp; rebalance — Cannock">
+          <img src="https://picsum.photos/seed/plumber7/600/450" alt="Power flush" loading="lazy">
+          <div class="gallery-caption">Power flush &amp; rebalance — Cannock</div>
+          <div class="gallery-hover"><span>View Photo</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-index="7"
+             data-src="https://picsum.photos/seed/plumber8/900/700"
+             data-caption="Underfloor heating — Uttoxeter">
+          <img src="https://picsum.photos/seed/plumber8/600/450" alt="Underfloor heating" loading="lazy">
+          <div class="gallery-caption">Underfloor heating installation — Uttoxeter</div>
+          <div class="gallery-hover"><span>View Photo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section id="why-us" class="why-us section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Why FlowRight</span>
+        <h2>What You Can Expect</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-in">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div class="why-body">
+            <h3>Same-Day Response</h3>
+            <p>We aim to be with you the same day — especially for emergencies. No waiting days for a call-back.</p>
+          </div>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/>
+            </svg>
+          </div>
+          <div class="why-body">
+            <h3>No Hidden Costs</h3>
+            <p>Upfront quotes before any work begins. No call-out fees, no surprise invoices — what we say is what you pay.</p>
+          </div>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+            </svg>
+          </div>
+          <div class="why-body">
+            <h3>All Work Guaranteed</h3>
+            <p>12-month guarantee on all labour as standard. We stand behind our work — if something isn't right, we'll fix it.</p>
+          </div>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"/>
+            </svg>
+          </div>
+          <div class="why-body">
+            <h3>Fully DBS Checked</h3>
+            <p>Enhanced DBS clearance on all our engineers. You can trust us in your home — we treat every property with respect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Customer Reviews</span>
+        <h2>What Our Customers Say</h2>
+      </div>
+      <!-- REPLACE: swap with real customer testimonials -->
+      <div class="testimonials-grid">
+        <div class="review-card fade-in">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Called FlowRight on a Sunday evening with a burst pipe under the kitchen sink. They were with me within two hours, fixed the problem cleanly, and charged exactly what they quoted. Brilliant service — won't use anyone else."</blockquote>
+          <div class="review-author">
+            <strong>Paul T.</strong>
+            <span>Uttoxeter &nbsp;·&nbsp; Emergency pipe repair</span>
+          </div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Had a new combi boiler installed to replace a 20-year-old system. The team were punctual, tidy, and explained everything clearly. The difference in our heating bills has been noticeable from the very first month."</blockquote>
+          <div class="review-author">
+            <strong>Sarah M.</strong>
+            <span>Burton upon Trent &nbsp;·&nbsp; Boiler installation</span>
+          </div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Used FlowRight for a full bathroom refit. From the initial quote to the final tiling, the quality of work was excellent. They stuck to the agreed timeline and budget — rare in this trade. Highly recommended."</blockquote>
+          <div class="review-author">
+            <strong>James K.</strong>
+            <span>Lichfield &nbsp;·&nbsp; Full bathroom refit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE AREA ===== -->
+  <section id="service-area" class="service-area section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Coverage</span>
+        <h2>Service Area</h2>
+        <p>We cover Uttoxeter and the surrounding Staffordshire region. Not sure if we cover your area? Just call.</p>
+      </div>
+      <div class="area-grid">
+        <div class="area-towns fade-in">
+          <h3>Towns We Cover</h3>
+          <!-- REPLACE: update with real service area towns -->
+          <ul class="towns-list">
+            <li>Uttoxeter</li>
+            <li>Burton upon Trent</li>
+            <li>Lichfield</li>
+            <li>Tamworth</li>
+            <li>Stafford</li>
+            <li>Rugeley</li>
+            <li>Cannock</li>
+            <li>Stone</li>
+            <li>Cheadle</li>
+            <li>Stoke-on-Trent</li>
+          </ul>
+          <p class="area-note">Typically within a 20-mile radius of Uttoxeter. Travel charges may apply outside this area — call to confirm.</p>
+          <a href="tel:+441889123456" class="btn btn-yellow" style="margin-top:24px">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px" aria-hidden="true">
+              <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/>
+            </svg>
+            Check Your Area — Call Free
+          </a>
+        </div>
+        <div class="map-wrap fade-in">
+          <!-- REPLACE: generate your own Google Maps embed at maps.google.com → Share → Embed a map -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78700.12345678!2d-1.9!3d52.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a5d4e4b4b4b4b%3A0x0!2sUttoxeter%2C%20Staffordshire!5e0!3m2!1sen!2suk!4v1700000000001"
+            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="FlowRight Plumbing service area — Staffordshire">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / QUOTE FORM ===== -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <span class="section-tag">Get in Touch</span>
+          <h2>Request a<br>Free Quote</h2>
+          <p>Fill in the form and we'll get back to you within a few hours. For urgent jobs or emergencies, call us directly.</p>
+
+          <!-- REPLACE: update all contact details -->
+          <div class="contact-detail-list">
+            <a href="tel:+441889123456" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <strong>Call or Text</strong>
+                <span>01889 123 456</span>
+              </div>
+            </a>
+            <a href="mailto:info@flowrightplumbing.co.uk" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+              </svg>
+              <div>
+                <strong>Email</strong>
+                <span>info@flowrightplumbing.co.uk</span>
+              </div>
+            </a>
+          </div>
+          <div class="emergency-box">
+            <strong>⚡ Emergency? Don't fill in a form.</strong>
+            <p>Call us directly — <a href="tel:+441889123456">01889 123 456</a> — and we'll dispatch an engineer as fast as we can.</p>
+          </div>
+        </div>
+
+        <!-- REPLACE: update action with your real Formspree form ID -->
+        <form id="contactForm" class="contact-form fade-in"
+              action="https://formspree.io/f/REPLACE_WITH_FORM_ID"
+              method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Full Name *</label>
+              <input type="text" id="cf-name" name="name" required placeholder="John Smith">
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Phone Number *</label>
+              <input type="tel" id="cf-phone" name="phone" required placeholder="07700 900000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email Address</label>
+            <input type="email" id="cf-email" name="email" placeholder="john@example.com">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-job">Job Type *</label>
+              <select id="cf-job" name="job_type" required>
+                <option value="">Select job type…</option>
+                <option>Boiler repair / service</option>
+                <option>Boiler installation</option>
+                <option>Emergency plumbing</option>
+                <option>Bathroom installation</option>
+                <option>Central heating</option>
+                <option>Hot water cylinder</option>
+                <option>Drain clearance</option>
+                <option>Other / Not sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-contact-time">Best Time to Call</label>
+              <select id="cf-contact-time" name="preferred_contact_time">
+                <option value="">Any time</option>
+                <option>Morning (8am–12pm)</option>
+                <option>Afternoon (12pm–5pm)</option>
+                <option>Evening (5pm–8pm)</option>
+                <option>ASAP — urgent</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Job Description *</label>
+            <textarea id="cf-message" name="message" rows="5" required
+              placeholder="Describe the job — what's happening, how long it's been a problem, any relevant details (e.g. boiler make/model, type of property)…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-yellow btn-full" id="formSubmit">
+            <span class="btn-label">Send Quote Request</span>
+            <span class="btn-spinner" hidden aria-live="polite">Sending…</span>
+          </button>
+          <p class="form-feedback success" id="formSuccess" hidden role="alert">
+            ✓ Request received — we'll be in touch shortly. For urgent jobs, call us directly.
+          </p>
+          <p class="form-feedback error" id="formError" hidden role="alert">
+            Something went wrong. Please call us on 01889 123 456 instead.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <!-- REPLACE: update all contact details, certifications, registration numbers -->
+        <p class="footer-logo">FlowRight <span>Plumbing &amp; Heating</span></p>
+        <p>Serving Staffordshire &amp; surrounding areas since 2014</p>
+        <a href="tel:+441889123456" class="footer-phone">01889 123 456</a>
+        <p style="margin-top:6px; font-size:0.85rem;">
+          <a href="mailto:info@flowrightplumbing.co.uk">info@flowrightplumbing.co.uk</a>
+        </p>
+      </div>
+      <div class="footer-services">
+        <h4>Services</h4>
+        <a href="#services">Boiler Repair &amp; Service</a>
+        <a href="#services">Emergency Plumbing</a>
+        <a href="#services">Bathroom Installations</a>
+        <a href="#services">Central Heating</a>
+        <a href="#services">Drain Clearance</a>
+      </div>
+      <div class="footer-certs">
+        <h4>Certifications &amp; Registration</h4>
+        <!-- REPLACE: update all registration numbers and certifications -->
+        <ul>
+          <li>Gas Safe Registered — No. 629847</li>
+          <li>CIPHE Member</li>
+          <li>£2M Public Liability Insurance</li>
+          <li>DBS Enhanced Checked</li>
+          <li>Worcestershire Bosch Partner</li>
+        </ul>
+        <div class="footer-area">
+          <h4>Areas Covered</h4>
+          <p>Uttoxeter · Burton · Lichfield · Tamworth · Stafford · Rugeley · Cannock · Stone</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FlowRight Plumbing &amp; Heating. All rights reserved. &nbsp;·&nbsp; Site by <a href="https://ryzeup.co.uk" target="_blank" rel="noopener noreferrer">RyzeUp</a></p>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+    <button class="lb-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+    <div class="lb-img-wrap">
+      <img id="lightboxImg" src="" alt="Job photo enlarged">
+      <p id="lightboxCaption" class="lb-caption"></p>
+    </div>
+    <button class="lb-nav lb-next" id="lightboxNext" aria-label="Next">&#8250;</button>
+  </div>
+
+  <!-- Sticky mobile call button -->
+  <a href="tel:+441889123456" class="mobile-call-btn" aria-label="Call 01889 123 456">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/>
+    </svg>
+    <span>01889 123 456 — Call Now</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
