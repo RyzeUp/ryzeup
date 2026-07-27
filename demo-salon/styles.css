@@ -250,8 +250,8 @@ button { cursor: pointer; font-family: var(--font-b); }
 
 .hero-left {
   display: flex;
-  align-items: center;
-  padding: 56px 48px;
+  align-items: flex-start;
+  padding: clamp(48px, 9vh, 100px) 48px 48px;
   background: var(--black);
 }
 
@@ -995,8 +995,9 @@ button { cursor: pointer; font-family: var(--font-b); }
   }
 
   .hero-left {
-    padding: 56px 32px 48px;
+    padding: clamp(48px, 9vh, 80px) 32px 48px;
     justify-content: center;
+    align-items: center;
     text-align: center;
   }
 
@@ -1049,7 +1050,7 @@ button { cursor: pointer; font-family: var(--font-b); }
   .location,
   .contact { padding: 80px 0; }
 
-  .hero-left   { padding: 60px 20px 48px; }
+  .hero-left   { padding: clamp(40px, 8vh, 72px) 20px 40px; align-items: flex-start; }
   .hero-title  { font-size: clamp(2.2rem, 11vw, 3rem); }
   .hero-stats  { gap: 24px; }
   .hero-stat strong { font-size: 1.5rem; }
