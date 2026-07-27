@@ -996,15 +996,15 @@ input:focus, select:focus, textarea:focus {
   filter: blur(0px);
 }
 .work-card-coffee {
-  background-image: url('assets/preview-coffee.png');
+  background-image: url('assets/preview-coffee.jpg');
   background-color: #2C1810;
 }
 .work-card-salon {
-  background-image: url('assets/preview-salon.png');
+  background-image: url('assets/preview-salon.jpg');
   background-color: #F5F2EE;
 }
 .work-card-plumber {
-  background-image: url('assets/preview-plumber.png');
+  background-image: url('assets/preview-plumber.jpg');
   background-color: #0B1E2E;
 }
 
