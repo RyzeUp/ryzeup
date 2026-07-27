@@ -250,8 +250,8 @@ button { cursor: pointer; font-family: var(--font-b); }
 
 .hero-left {
   display: flex;
-  align-items: flex-start;
-  padding: clamp(48px, 9vh, 100px) 48px 48px;
+  align-items: center;
+  padding: clamp(56px, 8vh, 96px) 64px clamp(96px, 16vh, 160px);
   background: var(--black);
 }
 
