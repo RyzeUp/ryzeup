@@ -985,27 +985,27 @@ input:focus, select:focus, textarea:focus {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
-  transition: transform 0.6s ease;
+  background-position: top center;
+  /* scale slightly so blur edge doesn't show */
+  transform: scale(1.06);
+  filter: blur(4px);
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
-.work-card:hover .work-card-bg { transform: scale(1.04); }
+.work-card:hover .work-card-bg {
+  transform: scale(1.1);
+  filter: blur(0px);
+}
 .work-card-coffee {
+  background-image: url('assets/preview-coffee.png');
   background-color: #2C1810;
-  background-image:
-    linear-gradient(135deg, rgba(196,98,45,0.4) 0%, rgba(44,24,16,0.8) 60%),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 8px);
 }
 .work-card-salon {
-  background-color: #1E1D1B;
-  background-image:
-    linear-gradient(135deg, rgba(201,151,58,0.35) 0%, rgba(17,17,16,0.85) 65%),
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 10px);
+  background-image: url('assets/preview-salon.png');
+  background-color: #F5F2EE;
 }
 .work-card-plumber {
+  background-image: url('assets/preview-plumber.png');
   background-color: #0B1E2E;
-  background-image:
-    linear-gradient(135deg, rgba(245,184,0,0.3) 0%, rgba(11,30,46,0.9) 60%),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 12px);
 }
 
 .work-card-info {
