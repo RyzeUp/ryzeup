@@ -44,6 +44,21 @@ navList.querySelectorAll('a').forEach(link => {
   });
 });
 
+/* ---------- Hero background video ----------
+   Only loads on larger screens (it's hidden on mobile/tablet, same as the old photo),
+   and stays on the still poster frame for anyone who prefers reduced motion. */
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+  const wide = window.matchMedia('(min-width: 1025px)').matches;
+  const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (wide && !calm) {
+    // MP4 works in Chrome, Safari, Edge and Firefox; WebM is the fallback for browsers without H.264
+    const canMp4 = heroVideo.canPlayType('video/mp4; codecs="avc1.640028"');
+    heroVideo.src = canMp4 ? heroVideo.dataset.mp4 : heroVideo.dataset.webm;
+    heroVideo.play().catch(() => {});
+  }
+}
+
 /* ---------- Scroll reveal ---------- */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
