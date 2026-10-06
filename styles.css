@@ -1254,3 +1254,19 @@ input:focus, select:focus, textarea:focus {
 @media (max-width: 768px) {
   .contact-page { padding-top: 112px; }
 }
+
+/* ============================================================
+   HERO VIDEO — stronger and crisper than the old photo treatment
+   ============================================================ */
+.hero-video {
+  opacity: 0.5;
+  mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 30%, black 55%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 30%, black 55%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+  filter: none;
+}
