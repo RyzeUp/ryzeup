@@ -1148,3 +1148,70 @@ input:focus, select:focus, textarea:focus {
   flex-shrink: 0;
   transition: gap 0.2s ease;
 }
+
+/* ============================================================
+   FREE MOCKUP SECTION
+   ============================================================ */
+.mockup-section {
+  padding: 100px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 72px;
+}
+.mockup-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 64px;
+  align-items: start;
+}
+.mockup-text h2 { margin-bottom: 24px; }
+.mockup-intro { margin-bottom: 40px; font-size: 1.05rem; }
+
+/* Honeypot — invisible to people, visible to bots */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px; height: 1px;
+  opacity: 0;
+}
+
+/* Inline validation */
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+.field-error {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+.form-status {
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 14px;
+}
+.form-status:empty { display: none; }
+.form-note a { color: var(--accent); text-decoration: underline; }
+
+/* Visible keyboard focus on buttons */
+.mockup-form .btn:focus-visible,
+.nav-cta:focus-visible,
+.nav-cta-mobile:focus-visible {
+  outline: 3px solid var(--accent-glow);
+  outline-offset: 3px;
+}
+
+/* Mobile-only CTA inside the hamburger menu */
+.nav-mobile-item { display: none; }
+
+@media (max-width: 1024px) {
+  .mockup-inner { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 768px) {
+  .mockup-section { padding: 72px 0; }
+  .nav-links.open .nav-mobile-item { display: block; }
+  .nav-links.open .nav-cta-mobile { width: 100%; justify-content: center; }
+}

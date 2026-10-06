@@ -22,8 +22,9 @@
         <li><a href="#pricing" class="nav-link">Pricing</a></li>
         <li><a href="#our-work" class="nav-link">Our Work</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-mobile-item"><a href="#free-mockup" class="btn btn-primary nav-cta-mobile">Free Mockup</a></li>
       </ul>
-      <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      <a href="#free-mockup" class="btn btn-primary nav-cta">Free Mockup</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -162,7 +163,7 @@
         Professional website design & SEO packages built for local businesses ready to dominate their market online.
       </p>
       <div class="hero-actions reveal">
-        <a href="#contact" class="btn btn-primary btn-lg">Get a Free Quote</a>
+        <a href="#free-mockup" class="btn btn-primary btn-lg">Get Your Free Mockup</a>
         <a href="#services" class="btn btn-ghost btn-lg">View Services</a>
       </div>
     </div>
@@ -502,6 +503,96 @@
     </div>
   </section>
 
+  <!-- ===================== FREE MOCKUP ===================== -->
+  <section class="mockup-section" id="free-mockup">
+    <div class="container">
+      <div class="mockup-inner">
+        <div class="mockup-text reveal">
+          <span class="section-tag">Free Mockup</span>
+          <h2>See Your New Website <span class="highlight">Before You Spend a Penny</span></h2>
+          <p class="mockup-intro">Tell us about your business and we'll design a custom homepage mockup for you — free, within 48 hours. No obligation, no pushy sales.</p>
+          <div class="why-points">
+            <div class="why-point">
+              <div class="point-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <div>
+                <h4>Built for your business</h4>
+                <p>A custom homepage design using your name, services and branding.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="point-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4>Ready in 48 hours</h4>
+                <p>We'll send it over within two working days.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="point-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <h4>Completely free</h4>
+                <p>No payment details, no commitment. If you love it, we'll talk next steps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card mockup-form reveal" id="mockupForm" novalidate>
+          <input type="hidden" name="_subject" value="New Free Mockup Request" />
+          <input type="hidden" name="form_type" value="Free Mockup" />
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mk-name">Your Name *</label>
+              <input type="text" id="mk-name" name="name" placeholder="John Smith" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="mk-business">Business Name *</label>
+              <input type="text" id="mk-business" name="business" placeholder="Smith's Refurbishments" required autocomplete="organization" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mk-what">What does your business do? *</label>
+              <input type="text" id="mk-what" name="business_type" placeholder="e.g. Kitchen &amp; bathroom refurbishments" required />
+            </div>
+            <div class="form-group">
+              <label for="mk-town">Town / Area *</label>
+              <input type="text" id="mk-town" name="town" placeholder="e.g. Burton upon Trent" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mk-website">Current Website</label>
+            <input type="url" id="mk-website" name="current_website" placeholder="Leave blank if you don't have one" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mk-email">Email Address *</label>
+              <input type="email" id="mk-email" name="email" placeholder="john@smithsrefurbs.co.uk" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="mk-phone">Phone Number</label>
+              <input type="tel" id="mk-phone" name="phone" placeholder="+44 7700 000000" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mk-notes">Anything else we should know?</label>
+            <textarea id="mk-notes" name="notes" rows="3" placeholder="Colours you like, websites you admire, services to highlight..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full">Request My Free Mockup →</button>
+          <p class="form-status" id="mockupStatus" role="status" aria-live="polite"></p>
+          <p class="form-note">One free homepage mockup per business. We'll never share your details. <a href="privacy-policy.html">Privacy Policy</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -517,6 +608,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#free-mockup">Free Mockup</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -531,7 +623,7 @@
         <h4>Get In Touch</h4>
         <p>hello@ryzeup.co.uk</p>
         <p>07427 273 887</p>
-        <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        <a href="#free-mockup" class="btn btn-primary">Free Mockup</a>
       </div>
     </div>
     <div class="footer-bottom">
