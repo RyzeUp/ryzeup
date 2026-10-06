@@ -1034,8 +1034,11 @@ input:focus, select:focus, textarea:focus {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+}
+@media (max-width: 768px) {
+  .work-grid { grid-template-columns: 1fr; }
 }
 
 .work-card {
@@ -1110,6 +1113,28 @@ input:focus, select:focus, textarea:focus {
 .work-card-plumber {
   background-image: url('assets/preview-plumber.jpg');
   background-color: #0B1E2E;
+}
+/* Leya Nova — add assets/preview-leyanova.jpg to show a real screenshot */
+.work-card-leyanova {
+  background-image: url('assets/preview-leyanova.jpg'),
+    radial-gradient(circle at 25% 30%, rgba(255,255,255,0.18), transparent 55%),
+    linear-gradient(135deg, #3B4C41 0%, #5C7363 55%, #A9B8A6 100%);
+  background-color: #3B4C41;
+  filter: none;
+}
+.work-card-wordmark {
+  position: absolute;
+  inset: 32px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .work-card-info {
@@ -1214,4 +1239,18 @@ input:focus, select:focus, textarea:focus {
   .mockup-section { padding: 72px 0; }
   .nav-links.open .nav-mobile-item { display: block; }
   .nav-links.open .nav-cta-mobile { width: 100%; justify-content: center; }
+}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.contact-page { padding-top: 140px; min-height: 70vh; }
+.contact-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .contact-page { padding-top: 112px; }
 }

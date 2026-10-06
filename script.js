@@ -10,7 +10,8 @@ window.addEventListener('scroll', () => {
 
 /* ---------- Active nav link on scroll ---------- */
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+// Only in-page links (#...) take part in scroll highlighting, so the Contact page keeps its own active state
+const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
