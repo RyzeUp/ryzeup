@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- DEMO: remove this noindex line when this becomes a real client's site -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- PLACEHOLDER: business name, town and description -->
+  <title>Copper &amp; Ember | Wood-fired restaurant in Burton upon Trent</title>
+  <meta name="description" content="Wood-fired modern British cooking in Burton upon Trent. See tonight's dishes, browse the menu and book a table online in under a minute.">
+  <link rel="canonical" href="https://ryzeup.co.uk/demos/copper-ember/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Copper &amp; Ember | Wood-fired kitchen, Burton upon Trent">
+  <meta property="og:description" content="Straight from the fire to the pass. See tonight's menu and book a table.">
+  <meta property="og:url" content="https://ryzeup.co.uk/demos/copper-ember/">
+  <meta property="og:image" content="https://ryzeup.co.uk/demos/copper-ember/assets/img/grill-flames.jpg">
+  <meta name="theme-color" content="#161412">
+
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/img/hero-poster.jpg">
+
+  <!-- Fonts are self-hosted in assets/fonts (see @font-face at the top of styles.css) -->
+  <link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+
+  <!-- Local SEO. PLACEHOLDER: every value below for a real client -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Copper & Ember",
+    "url": "https://ryzeup.co.uk/demos/copper-ember/",
+    "image": "https://ryzeup.co.uk/demos/copper-ember/assets/img/exterior.jpg",
+    "telephone": "+441632960123",
+    "servesCuisine": ["Modern British", "Wood-fired"],
+    "priceRange": "££",
+    "acceptsReservations": "True",
+    "hasMenu": "https://ryzeup.co.uk/demos/copper-ember/#menu",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Example Street",
+      "addressLocality": "Burton upon Trent",
+      "addressRegion": "Staffordshire",
+      "postalCode": "DE14 0XX",
+      "addressCountry": "GB"
+    },
+    "areaServed": ["Burton upon Trent", "Stapenhill", "Branston", "Stretton", "Swadlincote"],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday"], "opens": "17:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "17:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="demo-bar" role="note">
+    Demo site by <a href="https://ryzeup.co.uk">Ryze Up</a>. Copper &amp; Ember is a fictional restaurant and the photos and video are stock images.
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Copper &amp; Ember home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#logo"/></svg>
+        <span class="brand-word">Copper <i>&amp;</i> Ember</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#tonight">Tonight</a>
+        <a href="#menu">Menu</a>
+        <a href="#kitchen">The kitchen</a>
+        <a href="#visit">Find us</a>
+      </nav>
+      <a class="btn btn-copper header-cta" href="#book">Book a table</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO: full-bleed video with a photo poster.
+         PLACEHOLDER: swap assets/img/hero.mp4 and hero-poster.jpg for the restaurant's own footage/photo.
+         No video? Delete the <video> and the pause button; the poster image is used on its own. -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <video class="hero-video" id="hero-video" muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg" aria-hidden="true">
+          <source src="assets/img/hero.mp4" type="video/mp4">
+        </video>
+        <img class="hero-fallback" src="assets/img/hero-poster.jpg" alt="" width="1280" height="720">
+      </div>
+      <div class="wrap hero-copy">
+        <h1 id="hero-title">Straight from the fire to&nbsp;the&nbsp;pass.</h1>
+        <p class="lede">Wood-fired modern British cooking in the middle of Burton. Local ale in the glaze, oatcakes on the board, everything finished over embers.</p>
+        <div class="hero-actions">
+          <a class="btn btn-copper btn-lg" href="#book">Book a table</a>
+          <a class="btn btn-ghost btn-lg" href="#menu">See the menu</a>
+        </div>
+        <p class="hero-meta">
+          <span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span id="open-status">Wed to Sat 5pm till 10pm, Sunday lunch 12 till 5</span></span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> <a href="tel:+441632960123">01632 960 123</a></span>
+        </p>
+      </div>
+      <div class="hero-tools">
+        <span class="example-label">Example footage</span>
+        <button class="video-toggle" type="button" id="video-toggle" aria-pressed="false" hidden>
+          <svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+          <svg class="icon i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <span class="sr-only">Pause background video</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- TONIGHT ON THE PASS: ticket rail. Each ticket: one photo + one dish.
+         To add a dish, copy one <li class="ticket"> and change the photo, name, text and price. -->
+    <section class="pass" id="tonight" aria-labelledby="rail-title">
+      <div class="lamps" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="wrap pass-head">
+        <div>
+          <h2 id="rail-title">Tonight on the pass</h2>
+          <p>Six plates the kitchen is proud of this week.</p>
+        </div>
+        <div class="rail-controls">
+          <button class="rail-btn" type="button" data-rail="prev" aria-label="Previous dish"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
+          <button class="rail-btn" type="button" data-rail="next" aria-label="Next dish"><svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </div>
+      </div>
+
+      <div class="rail" id="rail" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Tonight's dishes. Drag, swipe or use the arrow keys.">
+        <ol class="tickets">
+          <li class="ticket">
+            <figure class="ticket-photo"><img src="assets/img/pork-belly.jpg" alt="Slices of crispy roast pork belly on a dark plate" width="600" height="900" loading="lazy"><span class="tag">Chef's pick</span></figure>
+            <div class="ticket-body">
+              <div class="ticket-top"><span>Tbl 04</span><span>18:42</span></div>
+              <h3>Ale-glazed pork belly</h3>
+              <p>Burton pale ale glaze, charred apple, proper crackling.</p>
+              <div class="ticket-foot"><span>From the fire</span><strong>£18</strong></div>
+            </div>
+          </li>
+          <li class="ticket">
+            <figure class="ticket-photo"><img src="assets/img/oatcake.jpg" alt="A folded savoury pancake on a white plate" width="900" height="600" loading="lazy"></figure>
+            <div class="ticket-body">
+              <div class="ticket-top"><span>Tbl 11</span><span>18:47</span></div>
+              <h3>Staffordshire oatcake</h3>
+              <p>Ham hock, burnt onion, mature cheddar, folded hot off the plancha.</p>
+              <div class="ticket-foot"><span>Small plate</span><strong>£8</strong></div>
+            </div>
+          </li>
+          <li class="ticket">
+            <figure class="ticket-photo"><img src="assets/img/rump-steak.jpg" alt="Sliced, charred steak on a wooden board" width="900" height="506" loading="lazy"></figure>
+            <div class="ticket-body">
+              <div class="ticket-top"><span>Tbl 02</span><span>18:51</span></div>
+              <h3>8oz dry-aged rump</h3>
+              <p>Rested over embers, bone-marrow butter, beef-dripping chips.</p>
+              <div class="ticket-foot"><span>From the fire</span><strong>£26</strong></div>
+            </div>
+          </li>
+          <li class="ticket">
+            <figure class="ticket-photo"><img src="assets/img/cauliflower.jpg" alt="A whole roast cauliflower on a red pepper sauce" width="900" height="600" loading="lazy"><span class="tag">Vegan</span></figure>
+            <div class="ticket-body">
+              <div class="ticket-top"><span>Tbl 07</span><span>18:55</span></div>
+              <h3>Whole roast cauliflower</h3>
+              <p>Smoked romesco, toasted almonds, chilli oil.</p>
+              <div class="ticket-foot"><span>From the fire</span><strong>£15</strong></div>
+            </div>
+          </li>
+          <li class="ticket">
+            <figure class="ticket-photo"><img src="assets/img/flatbread.jpg" alt="A stack of blistered flatbreads" width="675" height="900" loading="lazy"></figure>
+            <div class="ticket-body">
+              <div class="ticket-top"><span>Tbl 09</span><span>19:03</span></div>
+              <h3>Flatbread &amp; Marmite butter</h3>
+              <p>Blistered in the oven, butter whipped with Burton's own Marmite.</p>
+              <div class="ticket-foot"><span>To share</span><strong>£5</strong></div>
+            </div>
+          </li>
+          <li class="ticket">
+            <figure class="ticket-photo"><img src="assets/img/treacle-tart.jpg" alt="A small golden tart on a plate" width="900" height="598" loading="lazy"><span class="tag">Last few</span></figure>
+            <div class="ticket-body">
+              <div class="ticket-top"><span>Tbl 12</span><span>19:10</span></div>
+              <h3>Wood-fired treacle tart</h3>
+              <p>Baked in the dying embers, clotted cream, a little sea salt.</p>
+              <div class="ticket-foot"><span>Pudding</span><strong>£7</strong></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FULL MENU. Every dish has a photo: data-photo = large photo, the <img> inside = small thumbnail.
+         To add a dish, copy one <li> and change both image paths, the name and the price.
+         A dish with no photo: delete the <img class="thumb"> and the data-photo attribute. -->
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="wrap menu-layout">
+        <div class="menu-side">
+          <h2 id="menu-title">The menu</h2>
+          <p>Everything on here meets the fire at some point. It changes with what's good that week, so treat this as a taste of it.</p>
+          <figure class="menu-preview" aria-live="polite">
+            <img id="preview-img" src="assets/img/flatbread.jpg" alt="A stack of blistered flatbreads" width="675" height="900">
+            <figcaption><span id="preview-cap">Flatbread, Marmite butter</span><span class="example-label">Example image</span></figcaption>
+          </figure>
+          <p class="menu-hint">Hover or tap any dish to see it.</p>
+        </div>
+
+        <!-- PLACEHOLDER: replace with the restaurant's real menu, prices and photos -->
+        <div class="menu-card">
+          <h3>Small plates</h3>
+          <ul class="dishes">
+            <li><button type="button" class="dish-row" data-photo="assets/img/flatbread.jpg" data-alt="A stack of blistered flatbreads"><img class="thumb" src="assets/img/thumbs/flatbread.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Flatbread, Marmite butter</span><span class="dots" aria-hidden="true"></span><span class="price">£5</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/oatcake.jpg" data-alt="A folded savoury pancake on a white plate"><img class="thumb" src="assets/img/thumbs/oatcake.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Staffordshire oatcake, ham hock, burnt onion</span><span class="dots" aria-hidden="true"></span><span class="price">£8</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/leeks.jpg" data-alt="Alliums charring over open flames"><img class="thumb" src="assets/img/thumbs/leeks.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Fire-roasted leeks, hazelnut, buttermilk <abbr title="Vegetarian">(v)</abbr></span><span class="dots" aria-hidden="true"></span><span class="price">£8</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/mackerel.jpg" data-alt="Smoked mackerel close up"><img class="thumb" src="assets/img/thumbs/mackerel.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Smoked mackerel, pickled beetroot, horseradish</span><span class="dots" aria-hidden="true"></span><span class="price">£9</span></button></li>
+          </ul>
+
+          <h3>From the fire</h3>
+          <ul class="dishes">
+            <li><button type="button" class="dish-row" data-photo="assets/img/pork-belly.jpg" data-alt="Slices of crispy roast pork belly on a dark plate"><img class="thumb" src="assets/img/thumbs/pork-belly.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Ale-glazed pork belly, charred apple</span><span class="dots" aria-hidden="true"></span><span class="price">£18</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/chicken.jpg" data-alt="A golden roast chicken on a white plate"><img class="thumb" src="assets/img/thumbs/chicken.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Ember-roast half chicken, wild garlic, chips</span><span class="dots" aria-hidden="true"></span><span class="price">£17</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/rump-steak.jpg" data-alt="Sliced, charred steak on a wooden board"><img class="thumb" src="assets/img/thumbs/rump-steak.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">8oz dry-aged rump, bone-marrow butter</span><span class="dots" aria-hidden="true"></span><span class="price">£26</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/cauliflower.jpg" data-alt="A whole roast cauliflower on a red pepper sauce"><img class="thumb" src="assets/img/thumbs/cauliflower.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Whole roast cauliflower, romesco <abbr title="Vegan">(vg)</abbr></span><span class="dots" aria-hidden="true"></span><span class="price">£15</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/fish.jpg" data-alt="A grilled fish fillet with lemon on a wooden board"><img class="thumb" src="assets/img/thumbs/fish.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Day-boat fish, brown butter, capers</span><span class="dots" aria-hidden="true"></span><span class="price">Ask</span></button></li>
+          </ul>
+
+          <h3>On the side</h3>
+          <ul class="dishes">
+            <li><button type="button" class="dish-row" data-photo="assets/img/chips.jpg" data-alt="Chips on a white plate"><img class="thumb" src="assets/img/thumbs/chips.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Beef-dripping chips</span><span class="dots" aria-hidden="true"></span><span class="price">£5</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/hispi-cabbage.jpg" data-alt="Halved greens charring on a grill"><img class="thumb" src="assets/img/thumbs/hispi-cabbage.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Charred hispi cabbage, anchovy</span><span class="dots" aria-hidden="true"></span><span class="price">£5</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/greens.jpg" data-alt="Fresh green beans on a wooden board"><img class="thumb" src="assets/img/thumbs/greens.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Buttered greens <abbr title="Vegetarian">(v)</abbr></span><span class="dots" aria-hidden="true"></span><span class="price">£4.50</span></button></li>
+          </ul>
+
+          <h3>Puddings</h3>
+          <ul class="dishes">
+            <li><button type="button" class="dish-row" data-photo="assets/img/treacle-tart.jpg" data-alt="A small golden tart on a plate"><img class="thumb" src="assets/img/thumbs/treacle-tart.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Wood-fired treacle tart, clotted cream</span><span class="dots" aria-hidden="true"></span><span class="price">£7</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/pineapple.jpg" data-alt="Charred pineapple with cream on a white plate"><img class="thumb" src="assets/img/thumbs/pineapple.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Charred pineapple, rum caramel</span><span class="dots" aria-hidden="true"></span><span class="price">£7</span></button></li>
+            <li><button type="button" class="dish-row" data-photo="assets/img/bread-pudding.jpg" data-alt="Custard being poured over a warm pudding"><img class="thumb" src="assets/img/thumbs/bread-pudding.jpg" alt="" width="160" height="160" loading="lazy"><span class="dish">Bread &amp; butter pudding, custard</span><span class="dots" aria-hidden="true"></span><span class="price">£7</span></button></li>
+          </ul>
+
+          <p class="menu-foot">(v) vegetarian &nbsp; (vg) vegan. Tell us about allergies when you book.<br>A discretionary 10% service charge is added to tables of 6 or more.</p>
+        </div>
+      </div>
+
+      <!-- Phones: tapping a dish opens its photo here -->
+      <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="dialog-cap">
+        <img id="dialog-img" alt="">
+        <div class="dialog-bar">
+          <p id="dialog-cap"></p>
+          <button type="button" class="dialog-close" id="dialog-close"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg><span class="sr-only">Close photo</span></button>
+        </div>
+      </dialog>
+    </section>
+
+    <!-- THE KITCHEN -->
+    <section class="kitchen" id="kitchen" aria-labelledby="kitchen-title">
+      <div class="kitchen-feature">
+        <figure class="kitchen-photo">
+          <!-- PHOTO: the kitchen or pass in service, landscape, at least 1600px wide -->
+          <img src="assets/img/kitchen-pass.jpg" alt="An open kitchen lit by red heat lamps" width="1800" height="1286" loading="lazy">
+          <span class="example-label">Example image</span>
+        </figure>
+        <div class="kitchen-copy">
+          <h2 id="kitchen-title">One fire, one pass, no shortcuts</h2>
+          <p>The whole menu runs off a single wood-fired grill and oven. Meat rests over the embers, vegetables char in the flames and puddings bake as the fire dies down at the end of the night.</p>
+          <p>We buy from growers and butchers around Staffordshire and pour beer brewed a few streets away. If it isn't good that week, it isn't on.</p>
+          <p class="kitchen-note">Grab a seat at the pass counter and watch every plate go out.</p>
+        </div>
+      </div>
+      <!-- PHOTOS: three supporting shots. Any ratio works; they're cropped to fit. -->
+      <div class="wrap strip">
+        <figure><img src="assets/img/hero-grill.jpg" alt="Meat searing over flames on the grill" width="934" height="1400" loading="lazy"><figcaption>The grill</figcaption></figure>
+        <figure><img src="assets/img/chef.jpg" alt="A chef working in a dark commercial kitchen" width="1120" height="1400" loading="lazy"><figcaption>The kitchen</figcaption></figure>
+        <figure><img src="assets/img/dining-room.jpg" alt="A warm, wood-panelled dining room laid for dinner" width="933" height="1400" loading="lazy"><figcaption>The dining room</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- BOOKING: floor plan -->
+    <section class="book" id="book" aria-labelledby="book-title">
+      <div class="wrap">
+        <div class="book-head">
+          <h2 id="book-title">Pick your table</h2>
+          <p>Tap a table on the plan, choose a time and you're in. For groups of more than 8, give us a call.</p>
+        </div>
+
+        <form class="book-form" id="book-form" novalidate>
+          <fieldset class="plan-wrap">
+            <legend class="sr-only">Choose a table</legend>
+            <div class="plan" id="plan">
+              <div class="plan-pass" aria-hidden="true">The pass</div>
+              <div class="plan-door" aria-hidden="true">Entrance</div>
+              <div class="plan-window" aria-hidden="true">Window</div>
+              <!-- Tables: change data-seats, labels and grid positions in styles.css (.t1 to .t9) -->
+              <button type="button" class="table counter t1" data-table="Pass counter" data-seats="4" aria-pressed="false"><span class="t-name">Pass counter</span><span class="t-seats">Up to 4</span></button>
+              <button type="button" class="table t2 round" data-table="Table 2" data-seats="2" aria-pressed="false"><span class="t-name">2</span><span class="t-seats">2 seats</span></button>
+              <button type="button" class="table t3 round" data-table="Table 3" data-seats="2" aria-pressed="false"><span class="t-name">3</span><span class="t-seats">2 seats</span></button>
+              <button type="button" class="table t4" data-table="Table 4" data-seats="4" aria-pressed="false"><span class="t-name">4</span><span class="t-seats">4 seats</span></button>
+              <button type="button" class="table t5" data-table="Table 5" data-seats="4" aria-pressed="false" data-taken="true"><span class="t-name">5</span><span class="t-seats">Taken</span></button>
+              <button type="button" class="table t6 booth" data-table="Booth 6" data-seats="6" aria-pressed="false"><span class="t-name">Booth 6</span><span class="t-seats">Up to 6</span></button>
+              <button type="button" class="table t7 booth" data-table="Booth 7" data-seats="6" aria-pressed="false"><span class="t-name">Booth 7</span><span class="t-seats">Up to 6</span></button>
+              <button type="button" class="table t8 long" data-table="Long table" data-seats="8" aria-pressed="false"><span class="t-name">Long table</span><span class="t-seats">Up to 8</span></button>
+              <button type="button" class="table t9 round" data-table="Window 9" data-seats="2" aria-pressed="false"><span class="t-name">9</span><span class="t-seats">2 seats</span></button>
+            </div>
+            <p class="plan-help" id="plan-status" aria-live="polite">No table picked yet. You can also leave it to us.</p>
+          </fieldset>
+
+          <div class="fields">
+            <div class="field">
+              <label for="f-date">Date</label>
+              <input id="f-date" name="date" type="date" required>
+              <p class="error" id="e-date"></p>
+            </div>
+            <div class="field">
+              <label for="f-time">Time</label>
+              <select id="f-time" name="time" required>
+                <option value="">Pick a time</option>
+              </select>
+              <p class="error" id="e-time"></p>
+            </div>
+            <div class="field">
+              <label for="f-guests">Guests</label>
+              <select id="f-guests" name="guests" required>
+                <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option>
+                <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+              </select>
+              <p class="error" id="e-guests"></p>
+            </div>
+            <div class="field field-wide">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+              <p class="error" id="e-name"></p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              <p class="error" id="e-phone"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+              <p class="error" id="e-email"></p>
+            </div>
+            <div class="field field-wide">
+              <label for="f-notes">Allergies or occasion <span class="optional">(optional)</span></label>
+              <textarea id="f-notes" name="notes" rows="2"></textarea>
+            </div>
+            <input type="hidden" name="table" id="f-table" value="Any table">
+            <p class="consent field-wide">We only use your details to manage this booking. See our <a href="privacy.html">privacy policy</a>.</p>
+            <button class="btn btn-ink btn-lg field-wide" type="submit">Send booking</button>
+            <p class="form-msg field-wide" id="form-msg" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <!-- Shown after a successful booking -->
+        <div class="confirm" id="confirm" hidden tabindex="-1">
+          <div class="confirm-ticket">
+            <div class="ticket-top"><span>Booking</span><span id="c-ref"></span></div>
+            <h3 id="c-title">Order in</h3>
+            <p id="c-detail"></p>
+            <div class="ticket-foot"><span>See you soon</span><strong id="c-covers"></strong></div>
+          </div>
+          <p class="confirm-note">This is a demo, so no real booking was made. On a live site this goes straight to the restaurant's inbox or booking system.</p>
+          <button class="btn btn-line" type="button" id="book-again">Make another booking</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS: placeholder slots -->
+    <section class="reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <h2 id="reviews-title">From the guestbook</h2>
+        <!-- PLACEHOLDER: paste 3 real Google reviews here (name, short quote, date). Never write made-up reviews. -->
+        <div class="review-slots">
+          <div class="review-slot"><span>Real Google review goes here</span></div>
+          <div class="review-slot"><span>Real Google review goes here</span></div>
+          <div class="review-slot"><span>Real Google review goes here</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT: the front of the restaurant -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <figure class="visit-photo">
+        <!-- PHOTO: the restaurant's front, ideally at dusk with the lights on -->
+        <img src="assets/img/exterior.jpg" alt="A warmly lit restaurant front at night" width="1012" height="1800" loading="lazy">
+        <span class="example-label">Example image</span>
+      </figure>
+      <div class="visit-body">
+        <h2 id="visit-title">Find us</h2>
+        <!-- PLACEHOLDER: real address -->
+        <address>1 Example Street<br>Burton upon Trent<br>DE14 0XX</address>
+        <p class="visit-line"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> <a href="tel:+441632960123">01632 960 123</a></p>
+        <p class="visit-line"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p class="visit-small">Five minutes' walk from Burton station. Pay and display parking nearby.</p>
+
+        <h3 class="hours-title">Opening hours</h3>
+        <!-- PLACEHOLDER: real hours. Also update the JSON-LD in the head and HOURS in main.js -->
+        <table class="hours" id="hours-table">
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>Closed</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>5pm to 10pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>5pm to 10pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>5pm to 10pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>5pm to 10pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>12pm to 5pm</td></tr>
+          </tbody>
+        </table>
+        <!-- MAP: add a Google Maps embed iframe here for the real address, or keep the directions link -->
+        <a class="btn btn-ghost directions" href="https://www.google.com/maps/search/?api=1&amp;query=Burton+upon+Trent">
+          <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Get directions
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="brand brand-foot">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#logo"/></svg>
+        <span class="brand-word">Copper <i>&amp;</i> Ember</span>
+      </div>
+      <nav aria-label="Legal" class="footer-links">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <p class="credit">Website by <a href="https://ryzeup.co.uk">Ryze Up</a></p>
+    </div>
+  </footer>
+
+  <!-- Phones: fixed call / book bar -->
+  <div class="mobile-bar">
+    <a href="tel:+441632960123" class="mb-call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
+    <a href="#book" class="mb-book"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Book a table</a>
+  </div>
+
+  <!-- Logo + icons (Lucide, ISC licence) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="logo" viewBox="0 0 48 48"><circle cx="20" cy="26" r="15" fill="none" stroke="currentColor" stroke-width="3"/><path d="M34 22.5h11a2.5 2.5 0 0 1 0 5H34.4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path style="fill:var(--logo-flame,#c8865a)" d="M20.5 13.5c4.6 4.4 7.2 8.1 7.2 12.6a7.7 7.7 0 0 1-15.4 0c0-3 1.4-5.1 3.3-6.8-.1 2.6.9 4.2 2.4 4.9-.6-3.6.3-7.2 2.5-10.7z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    </defs>
+  </svg>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
